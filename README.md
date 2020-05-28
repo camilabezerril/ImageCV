@@ -1,0 +1,9 @@
+# ImageCV
+Desenvolvimento de extensão para visão computacional no ambiente de programação por blocos App Inventor
+
+Esta documentação faz parte dos entregáveis do projeto de Iniciação Científica XXX/2019.
+
+Fique nesta página se quiser criar no app inventor um app de celular que usa a extensão.
+Navegue para [Como criar extensões do app Inventor](README.md) para ver o que foi feito para criar a extensão (setup de IDE, inclusão de bibliotecas, ...).
+Navegue para [Como a extensão foi codificada](README.md) para ver como chegou-se à esta versão do código (escolha de tipos de dados, escolhas de funcionamento dos blocos, ...).
+
