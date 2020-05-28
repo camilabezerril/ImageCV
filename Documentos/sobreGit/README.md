@@ -54,3 +54,5 @@ Talvez explicar a mesma coisa por outra fonte ajude a entender melhor. Pode tent
 git remote add origin PATH/TO/REPO; git fetch; git checkout -t origin/master. Não tentei, mas fica a dica - uma hora eu tento).
 
 (comentário 5: apagando o .git e seu conteúdo, removo o diretório do git. [link](https://stackoverflow.com/questions/1514054/how-do-i-delete-a-local-repository-in-git))
+
+Modifico aqui para simular o commit de um outro colaborador.
