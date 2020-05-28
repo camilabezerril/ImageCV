@@ -75,4 +75,6 @@ git remote add origin PATH/TO/REPO; git fetch; git checkout -t origin/master. N�
 
 (comentário 5: apagando o .git e seu conteúdo, removo o diretório do git. [link](https://stackoverflow.com/questions/1514054/how-do-i-delete-a-local-repository-in-git))
 
+Modifico aqui para simular o commit de um outro colaborador.
+
 Fazendo de conta que não sei que outro colaborador fez um commit durante a minha edição, vou tentar um push...
