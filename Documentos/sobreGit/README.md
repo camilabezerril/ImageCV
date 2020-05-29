@@ -70,7 +70,7 @@ Enquanto editava este arquivo, entrei pelo navegador, editei, modifiquei e "comi
 
 O *push* foi negado com mensagem no screenshot abaixo:
 
-![]("screenshots/Captura de tela de 2020-05-28 20-44-33.png")
+![](screenshots/Captura%20de%20tela%20de%202020-05-28%2020-44-33.png")
 
 
 create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-29-03.png
@@ -93,6 +93,7 @@ git remote add origin PATH/TO/REPO; git fetch; git checkout -t origin/master. N�
 
 (comentário 5: apagando o .git e seu conteúdo, removo o diretório do git. [link](https://stackoverflow.com/questions/1514054/how-do-i-delete-a-local-repository-in-git))
 
+(comentário 6: hiperlinks não podem ter espaços [referência](https://stackoverflow.com/questions/13051428/how-to-display-images-in-markdown-files-on-github). Não adianta colocar dentro de doublequotes. Substituir por %20)
 ## registro da simulação 1
 
 Modifico aqui para simular o commit de um outro colaborador.

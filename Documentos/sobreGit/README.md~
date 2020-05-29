@@ -64,6 +64,24 @@ Talvez explicar a mesma coisa por outra fonte ajude a entender melhor. Pode tent
 
 Existe uma espécie de inconsistência lógica em torndo dos usos de *push*, *pull* e *merge*. Talvez fique mais claro para mim quando colocar em prática a possibilidade de usar vários repositórios remotos, várias versões e vários ambientes (o computador em que estou digitando os comandos é um servidor git ou é um cliente git), ... Por enquanto parece tudo mais ou menos igual, embora eu saiba que quando estou dando os comandos no cliente, *push* significa enviar do cliente para o servidor e que o servidor é o repositório remoto e *pull* significa trazer do servidor para o cliente.  
 
+Simulei um cenário **simulação 1** que achei que daria um problema:
+
+Enquanto editava este arquivo, entrei pelo navegador, editei, modifiquei e "comitei" este mesmo arquivo, simulando um outro colaborador que terminou de modificar o mesmo arquivo. Agi como padrão: *git add .*, *git commit -m...*, *git push*. 
+
+O *push* foi negado com mensagem no screenshot abaixo:
+
+![]("screenshots/Captura de tela de 2020-05-28 20-44-33.png")
+
+
+create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-29-03.png
+ create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-30-08.png
+ create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-31-44.png
+ create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-32-48.png
+ create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-36-30.png
+ create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-43-24.png
+ create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-44-10.png
+
+
 (comentário: este editor de markdown é bem legal - pelo menos o bold e o itálico ele formata WYSIWYG).
 
 (comentário 2: a palavra *é* pode ser usada para dar a definição de dicionário de algo ou para dar a percepção de quem escreve sobre aquilo que ele está descrevendo, além de outros usos. Fique atento!)
@@ -74,6 +92,8 @@ Existe uma espécie de inconsistência lógica em torndo dos usos de *push*, *pu
 git remote add origin PATH/TO/REPO; git fetch; git checkout -t origin/master. Não tentei, mas fica a dica - uma hora eu tento).
 
 (comentário 5: apagando o .git e seu conteúdo, removo o diretório do git. [link](https://stackoverflow.com/questions/1514054/how-do-i-delete-a-local-repository-in-git))
+
+## registro da simulação 1
 
 Modifico aqui para simular o commit de um outro colaborador.
 
