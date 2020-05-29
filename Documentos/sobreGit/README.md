@@ -185,6 +185,10 @@ To https://github.com/camilabezerril/ImageCV.git
 [básico](https://www.markdownguide.org/basic-syntax/)
 [estendido](https://www.markdownguide.org/extended-syntax/)
 
+## Fluxogramas
+
+![](git.svg)
+
 ## Nota sobre outro projeto
 
 A queda da conexão é determinística: transmite uns 60 pontos (ou talvez 20 minutos), deixa de transmitir por 8 minutos e repete o ciclo.

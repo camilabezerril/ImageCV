@@ -91,7 +91,7 @@ dica: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 Segui a recomendação: fiz um *pull*:
 
-´´´
+```
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
 Username for 'https://github.com': fnakano
 Password for 'https://fnakano@github.com': 
@@ -105,17 +105,17 @@ From https://github.com/camilabezerril/ImageCV
 Mesclagem automática de Documentos/sobreGit/README.md
 CONFLITO (conteúdo): conflito de mesclagem em Documentos/sobreGit/README.md
 Automatic merge failed; fix conflicts and then commit the result.
-´´´
+```
 
 Fiz um novo *pull* (*à posteriori* acho que era desnecessário, mas a mensagem foi esclarecedora):
 
-´´´
+```
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
 error: Pulling is not possible because you have unmerged files.
 dica: Fix them up in the work tree, and then use 'git add/rm <file>'
 dica: as appropriate to mark resolution and make a commit.
 fatal: Exiting because of an unresolved conflict.
-´´´
+```
 Aí que fui ver que o arquivo tinha sido modificado e que o conflito estava marcado:
 
 ![](screenshots/Captura%20de%20tela%20de%202020-05-28%2020-31-44.png)
@@ -126,7 +126,7 @@ Resolvi o conflito (coloquei as frases - uma vinda de um commit, outra da minha 
 
 Então fui pelo caminho do *pull*:
 
-´´´
+```
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git add .
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git commit -m "conflito entre outro commit e push sendo resolvido"
 [master db7714a] conflito entre outro commit e push sendo resolvido
@@ -141,11 +141,11 @@ fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
 Username for 'https://github.com': fnakano
 Password for 'https://fnakano@github.com': 
 Already up to date.
-´´´
+```
 
 Achei estranho pois embora atualizado, o conteúdo do servidor não tinha atualizado. Tentei *add* e *commit* novamente e recebi a mensagem elucidativa:
 
-´´´
+```
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git add .
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git commit -m "parece não ter resolvido..."
 No ramo master
@@ -153,11 +153,11 @@ Seu ramo está à frente de 'origin/master' por 2 submissões.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
-´´´
+```
 
 Agora o *push* resolveu:
 
-´´´
+```
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git push
 Username for 'https://github.com': fnakano
 Password for 'https://fnakano@github.com': 
@@ -169,7 +169,7 @@ Total 12 (delta 4), reused 0 (delta 0)
 remote: Resolving deltas: 100% (4/4), completed with 1 local object.
 To https://github.com/camilabezerril/ImageCV.git
    313eea8..db7714a  master -> master
-´´´
+```
 
 ### outros screenshots relacionados ao teste:
 
@@ -179,6 +179,18 @@ To https://github.com/camilabezerril/ImageCV.git
 (screenshots/Captura%20de%20tela%20de%202020-05-28%2020-43-24.png)
 (screenshots/Captura%20de%20tela%20de%202020-05-28%2020-44-10.png)
 (screenshots/Captura%20de%20tela%20de%202020-05-28%2020-44-33.png)
+
+## Referências sobre markdown
+
+[básico](https://www.markdownguide.org/basic-syntax/)
+[estendido](https://www.markdownguide.org/extended-syntax/)
+
+## Nota sobre outro projeto
+
+A queda da conexão é determinística: transmite uns 60 pontos (ou talvez 20 minutos), deixa de transmitir por 8 minutos e repete o ciclo.
+
+Acredito que a quantidade de requisições geradas (uma a cada 20 segundos), *atrapalha* o funcionamento do roteador wifi/adsl, que fica num modo "estranho" por 8 minutos, quando consegue recuperar o erro e funcionar por mais um período.
+
 
 (comentário: este editor de markdown é bem legal - pelo menos o bold e o itálico ele formata WYSIWYG).
 
