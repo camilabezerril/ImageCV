@@ -183,11 +183,12 @@ To https://github.com/camilabezerril/ImageCV.git
 ## Referências sobre markdown
 
 [básico](https://www.markdownguide.org/basic-syntax/)
+
 [estendido](https://www.markdownguide.org/extended-syntax/)
 
 ## Fluxogramas
 
-![](./git.png)
+![](./git2.png)
 
 ## Nota sobre outro projeto
 
