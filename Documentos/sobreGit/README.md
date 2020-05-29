@@ -187,7 +187,7 @@ To https://github.com/camilabezerril/ImageCV.git
 
 ## Fluxogramas
 
-![](git.png)
+![](./git.png)
 
 ## Nota sobre outro projeto
 
