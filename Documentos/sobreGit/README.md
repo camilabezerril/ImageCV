@@ -68,19 +68,117 @@ Simulei um cenário **simulação 1** que achei que daria um problema:
 
 Enquanto editava este arquivo, entrei pelo navegador, editei, modifiquei e "comitei" este mesmo arquivo, simulando um outro colaborador que terminou de modificar o mesmo arquivo. Agi como padrão: *git add .*, *git commit -m...*, *git push*. 
 
-O *push* foi negado com mensagem no screenshot abaixo:
+O *push* foi negado:
 
-![](screenshots/Captura%20de%20tela%20de%202020-05-28%2020-44-33.png)
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git add .
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git commit -m "teste push em cima de outro commit"
+[master 124b3d9] teste push em cima de outro commit
+ 3 files changed, 1676 insertions(+), 3 deletions(-)
+ create mode 100644 Documentos/sobreGit/README.md~
+ create mode 100644 Documentos/sobreGit/git1.graphml
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git push
+Username for 'https://github.com': fnakano
+Password for 'https://fnakano@github.com': 
+To https://github.com/camilabezerril/ImageCV.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/camilabezerril/ImageCV.git'
+dica: Updates were rejected because the remote contains work that you do
+dica: not have locally. This is usually caused by another repository pushing
+dica: to the same ref. You may want to first integrate the remote changes
+dica: (e.g., 'git pull ...') before pushing again.
+dica: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+Segui a recomendação: fiz um *pull*:
 
+´´´
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
+Username for 'https://github.com': fnakano
+Password for 'https://fnakano@github.com': 
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From https://github.com/camilabezerril/ImageCV
+   22c78eb..313eea8  master     -> origin/master
+Mesclagem automática de Documentos/sobreGit/README.md
+CONFLITO (conteúdo): conflito de mesclagem em Documentos/sobreGit/README.md
+Automatic merge failed; fix conflicts and then commit the result.
+´´´
 
-create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-29-03.png
- create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-30-08.png
- create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-31-44.png
- create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-32-48.png
- create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-36-30.png
- create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-43-24.png
- create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-44-10.png
+Fiz um novo *pull* (*à posteriori* acho que era desnecessário, mas a mensagem foi esclarecedora):
 
+´´´
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
+error: Pulling is not possible because you have unmerged files.
+dica: Fix them up in the work tree, and then use 'git add/rm <file>'
+dica: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+´´´
+Aí que fui ver que o arquivo tinha sido modificado e que o conflito estava marcado:
+
+![](screenshots/Captura%20de%20tela%20de%202020-05-28%2020-31-44.png)
+
+Resolvi o conflito (coloquei as frases - uma vinda de um commit, outra da minha versão local - na ordem, removi as marcas)
+
+![](screenshots/Captura%20de%20tela%20de%202020-05-28%2020-32-48.png)
+
+Então fui pelo caminho do *pull*:
+
+´´´
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git add .
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git commit -m "conflito entre outro commit e push sendo resolvido"
+[master db7714a] conflito entre outro commit e push sendo resolvido
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
+fatal: unable to access 'https://github.com/camilabezerril/ImageCV.git/': Failed to connect to github.com port 443: Tempo esgotado para conexão
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
+Username for 'https://github.com': fnakano
+Password for 'https://fnakano@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/camilabezerril/ImageCV.git/'
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git pull
+Username for 'https://github.com': fnakano
+Password for 'https://fnakano@github.com': 
+Already up to date.
+´´´
+
+Achei estranho pois embora atualizado, o conteúdo do servidor não tinha atualizado. Tentei *add* e *commit* novamente e recebi a mensagem elucidativa:
+
+´´´
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git add .
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git commit -m "parece não ter resolvido..."
+No ramo master
+Seu ramo está à frente de 'origin/master' por 2 submissões.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+´´´
+
+Agora o *push* resolveu:
+
+´´´
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git push
+Username for 'https://github.com': fnakano
+Password for 'https://fnakano@github.com': 
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 43.26 KiB | 2.40 MiB/s, done.
+Total 12 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+To https://github.com/camilabezerril/ImageCV.git
+   313eea8..db7714a  master -> master
+´´´
+
+### outros screenshots relacionados ao teste:
+
+(screenshots/Captura%20de%20tela%20de%202020-05-28%2020-29-03.png)
+(screenshots/Captura%20de%20tela%20de%202020-05-28%2020-30-08.png)
+(screenshots/Captura%20de%20tela%20de%202020-05-28%2020-36-30.png)
+(screenshots/Captura%20de%20tela%20de%202020-05-28%2020-43-24.png)
+(screenshots/Captura%20de%20tela%20de%202020-05-28%2020-44-10.png)
+(screenshots/Captura%20de%20tela%20de%202020-05-28%2020-44-33.png)
 
 (comentário: este editor de markdown é bem legal - pelo menos o bold e o itálico ele formata WYSIWYG).
 
