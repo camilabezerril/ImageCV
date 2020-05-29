@@ -70,7 +70,7 @@ Enquanto editava este arquivo, entrei pelo navegador, editei, modifiquei e "comi
 
 O *push* foi negado com mensagem no screenshot abaixo:
 
-![](screenshots/Captura de tela de 2020-05-28 20-44-33.png?raw=true)
+![](screenshots/Captura%20de%20tela%20de%202020-05-28%2020-44-33.png)
 
 
 create mode 100644 Documentos/sobreGit/screenshots/Captura de tela de 2020-05-28 20-29-03.png
