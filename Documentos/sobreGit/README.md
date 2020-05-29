@@ -1,4 +1,4 @@
-# SensoresRemotos
+# Como Git e GitHub são usados neste projeto
 
 ## Motivação
 

@@ -12,17 +12,17 @@ Vou chamar *"na maioria dos casos, automaticamente"* de *quase automaticamente*.
 
 Grandes vantagens tornam-se evidentes quando há várias pessoas trabalhando no mesmo arquivo. Neste caso cada uma pode ter sua cópia, dar sua contribuição e depois as contribuições podem ser fundidas *quase automaticamente*.
 
-Se você está num projeto com uma equipe usando git para sincronizar os arquivos do projeto e precisou ficou fora por um mês, com três comandos você atualiza a sua versão e está pronto para voltar, pelo menos no que concerne aos arquivos.
+Se você está num projeto com uma equipe usando git para sincronizar os arquivos do projeto e precisou ficar fora por um mês, com três comandos você atualiza a sua versão e está pronto para voltar, pelo menos no que concerne aos arquivos.
 
-Se você está trabalhando na próxima versão do seu projeto e surge um erro que precisa ser corrigido na versão de produção, com três comandos você entra na versão de produção, leva seu tempo para fazer a correção e com outros três comandos, volta para a próxima versão.
+Se você está trabalhando na próxima versão do seu projeto e surge um erro que precisa ser corrigido na versão de produção, com uns poucos comandos você entra na versão de produção, leva seu tempo para fazer a correção e com outros poucos comandos, atualiza a versão de produção e volta para os arquivos e o trabalho na próxima versão.
 
 Se há diferentes versões, por exemplo para Android e para iOS, com alguns arquivos em comum e outros diferentes, com vários colaboradores em cada versão, manter os arquivos coerentes pode ser facilitado através do uso de controladores de versão, como git.
 
-Em vista das vantagens, aprender a usar git ser um investimento: gasta-se esforço aprendendo, ganha-se capacidade de acrescentar colaboradores (escalabilidade) e agilidade em gerenciar o projeto.
+Em vista das vantagens, aprender a usar git pode ser um investimento que compensa: gasta-se esforço aprendendo, ganha-se capacidade de acrescentar colaboradores (escalabilidade) e agilidade em gerenciar o projeto.
 
 ## Etapas iniciais
 
-Comecei este repositório primeiro criando o repositório no github e depois clonando no computador local. Fiz isso porque não achei no github como criar subdiretórios e quero isso para organizar os arquivos que pretendo criar e manter aqui.
+Comecei este repositório criando primeiro o repositório no github (repositório remoto) e depois clonando no computador local (repositório local). Fiz isso porque não achei no github como criar subdiretórios e quero isso para organizar os arquivos que pretendo criar e manter aqui.
 
 Criar o repositório no github foram alguns apertar de botões. Preferi criar com o *README.md* para criar o repositório com algo dentro - recomendo fazer isso. Chamarei o repositório de *RepoTeste*. Já criar no computador local deu mais trabalho pois fiz umas besteiras no caminho.
 
@@ -190,12 +190,7 @@ To https://github.com/camilabezerril/ImageCV.git
 
 ![](./git2.png)
 
-## Nota sobre outro projeto
-
-A queda da conexão é determinística: transmite uns 60 pontos (ou talvez 20 minutos), deixa de transmitir por 8 minutos e repete o ciclo.
-
-Acredito que a quantidade de requisições geradas (uma a cada 20 segundos), *atrapalha* o funcionamento do roteador wifi/adsl, que fica num modo "estranho" por 8 minutos, quando consegue recuperar o erro e funcionar por mais um período.
-
+## Comentários
 
 (comentário: este editor de markdown é bem legal - pelo menos o bold e o itálico ele formata WYSIWYG).
 
