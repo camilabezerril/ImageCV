@@ -43,6 +43,11 @@ Depois de instalar o git:
 - com o terminal (sim, uso linux), entre na pasta;
 - execute **git clone <nome do repositório>  .   ** (o ponto no final é importante!)
 
+**nota**: neste exemplo, os comandos git são sempre usados na pasta em que *git clone* foi executado - é nela que a sub-pasta *.git* oculta é criada. 
+
+**nota**: criando deste jeito, a associação entre a pasta local e o repositório remoto fica armazenada (em algum lugar na sub-pasta oculta *.git*). Assim, os comandos *git* usarão o repositório remoto associado e você não precisa informar a cada comando. 
+
+
 Deve ter aparecido algumas mensagens e se tudo deu certo, o *README.md* deve estar lá também.
 
 Talvez explicar a mesma coisa por outra fonte ajude a entender melhor. Pode tentar [a documentação do github sobre clonar repositórios](https://help.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -59,6 +64,9 @@ Editor online pode gerar perda de dados (trabalho). Comecei a editar o arquivo l
 - git add <arquivo(s) que mudou)
 - git commit -m "mensagem"
 - git push
+
+
+**nota** *git add .* é recursivo. Isto quer dizer que as sub-pastas e arquivos que elas contém são incluidos nos arquivos que serão sincronizados.
 
 Talvez explicar a mesma coisa por outra fonte ajude a entender melhor. Pode tentar [a documentação do github sobre sincronizar arquivos remotos](https://help.github.com/pt/github/using-git/pushing-commits-to-a-remote-repository)
 
