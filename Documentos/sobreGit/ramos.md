@@ -10,7 +10,7 @@ Desenvolvedores são pessoas e, como tal, importam-se com o resultado do seu tra
 
 A fim de evitar surpresas, o outro desenvolvedor pode adotar o seguinte fluxo de trabalho:
 
-1. criar uma cópia do objeto original, 
+1. criar uma cópia (novo ramo) do objeto original, 
 2. fazer os ajustes que achar melhor na sua cópia,
 3. **avisar os colegas que tem uma nova versão do objeto**, 
 4. discutir o que for necessário e 
@@ -35,7 +35,40 @@ Acredito que esses dois ramos (remoto e local), cada desenvolvedor com um ramo l
 
 Este fluxo de trabalho pode funcionar (nunca tentei), mas não permite gerenciar diferentes versões no mesmo local. Por exemplo quando, no mesmo local, alguém trabalha na versão de produção e na próxima versão e precisa trocar de uma para outra, seja para usar a versão de produção, seja para corrigir algo na versão de produção e depois voltar para a versão de desenvolvimento. Ou quando a equipe é grande e há fusões intermediárias,...
 
-## Criar cópia
+### Criar novo ramo
+
+Partindo do pressuposto que você está no diretório local que contém o .git e que clonou o ramo master, o comando *git branch* lista ramos. No meu caso:
+
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+```
+Vale notar que existe um ramo *master*, local e um ramo *master* remoto. O ramo em que estou é assinalado por um asterisco.
+
+Com o requisito de partir de um ramo sincronizado (fiz *add, commit e push* ), o comando ```git branch <nome>``` cria um novo ramo de nome *<nome>*. Com este comando, ele é criado sincronizado com o ramo em que se está, mas ainda não se mudou para ele, como é possível notar abaixo. Para mudar para o ramo criado, usa-se ```git checkout <nome>```.
+
+
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git branch  RevisaoFN
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git branch
+  RevisaoFN
+* master
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git checkout RevisaoFN 
+Switched to branch 'RevisaoFN'
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ ls
+Documentos  ImageCV.java  README.md  README.md~
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git branch
+* RevisaoFN
+  master
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ 
+```
+
+![](screenshots/novoramo.png)
+
+(nota: escrevi e salvei este conteúdo com *RevisaoFN* como ramo ativo. Mas este arquivo deveria ser atualizado direto no master pois só eu edito este arquivo. Isto quer dizer que salvei o arquivo num ramo diferente do que eu queria. Como não atualizei, se eu quiser mudar de ramo agora usando *git checkout ...* serei impedido. Posso comitar neste ramo, mas quando eu fizer *pull request* deste ramo, obrigarei meus colaboradores a revisar este arquivo, o que não é necessário. Jogar fora as alterações *thrashing* não é o que eu quero. A solução é *stash*: *git stash*, troca de ramo, *git stash apply*, conforme [sugestão](https://blog.cedrotech.com/git-o-minimo-que-voce-precisa-saber-para-trabalhar-em-equipe-parte-2/) )
+
 
 ## Fazer ajustes
 
@@ -44,5 +77,14 @@ Este fluxo de trabalho pode funcionar (nunca tentei), mas não permite gerenciar
 ## Discutir
 
 ## Fundir versões
+
+## Outros fluxos de trabalho
+
+
+https://blog.cedrotech.com/git-o-minimo-que-voce-precisa-saber-para-trabalhar-em-equipe-parte-2/
+https://gist.github.com/blackfalcon/8428401
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+https://www.atlassian.com/git/tutorials/comparing-workflows#!workflow-gitflow
+https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 
 

@@ -4,7 +4,7 @@
 
 Estou começando a trabalhar mais seriamente com git e github. Esta página é uma mistura de registro de experiência com tutorial. 
 
-Já tentei passar da superfície do uso do git algumas vezes e sei, por experiência, que tentar sozinho a partir dos livros e sites é difícil... não sei bem o motivo. Vi também que [outros desenvolvedores perceberam o mesmo](https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c). O conteúdo, em termos de comandos e seus usos são muito parecidos com o que apresento aqui, mas o ponto de partida, narrativa e destaques são diferentes. Também tem alguns diagramas bastante elucidativos.
+Já tentei passar da superfície do uso do git algumas vezes e sei, por experiência, que tentar sozinho a partir dos livros e sites é difícil... não sei bem o motivo, talvez porque quis começar pela teoria de funcionamento e a documentação para isso é [pouco atraente](https://git-scm.com/book/pt-br/v2/Git-Branching-Remote-Branches). Vi também que [outros desenvolvedores perceberam o mesmo](https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c). O conteúdo, em termos de comandos e seus usos são muito parecidos com o que apresento aqui, mas o ponto de partida, narrativa e destaques são diferentes. Também tem alguns diagramas bastante elucidativos.
 
 Aqui, situação de partida é: um desenvolvedor, um ramo de trabalho, um repositório remoto (o github). O desenvolvedor pode trabalhar a partir de vários lugares e em cada um ter um repositório local.
 
