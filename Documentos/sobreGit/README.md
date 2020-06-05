@@ -1,8 +1,18 @@
 # Como Git e GitHub são usados neste projeto
 
-## Motivação
+## Sobre esta página
 
-Estou começando a trabalhar mais seriamente com git e github.
+Estou começando a trabalhar mais seriamente com git e github. Esta página é uma mistura de registro de experiência com tutorial. 
+
+Já tentei passar da superfície do uso do git algumas vezes e sei, por experiência, que tentar sozinho a partir dos livros e sites é difícil... não sei bem o motivo. Vi também que [outros desenvolvedores perceberam o mesmo](https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c). O conteúdo, em termos de comandos e seus usos são muito parecidos com o que apresento aqui, mas o ponto de partida, narrativa e destaques são diferentes. Também tem alguns diagramas bastante elucidativos.
+
+Aqui, situação de partida é: um desenvolvedor, um ramo de trabalho, um repositório remoto (o github). O desenvolvedor pode trabalhar a partir de vários lugares e em cada um ter um repositório local.
+
+A situação de partida permite aprender e testar os comandos do git, sem precisar preocupar-se com preservar o trabalho de outras pessoas, ou simular outras pessoas, ou precisar da ajuda de outras pessoas... mas não explora as principais situações de desenvolvimento colaborativo para as quais git foi feito.
+
+Se você quiser ir direto para [ramos (branches) e como isso funciona, pode vir por aqui (e voltar para cá, se achar que precisa :)](ramos.md)
+
+## Motivação
 
 Se você for o único desenvolvedor do projeto, quer acessar o fonte de qualquer lugar e quando edita o fonte em computadores diferentes tem dificuldade ou aborrecimentos em unificar as versões dos computadores, git, github e esta página podem ajudar.
 
@@ -30,9 +40,9 @@ Antes de começar a história, instale o [git](https://git-scm.com/). :)
 
 Ok, antes de antes de começar: 
 
-- git é uma ferramenta de versionamento e desenvolvimento paralelo (colaborativo) em que cada colaborador pode ter um ou mais ramos de trabalho (*branch*) e pode mantê-los todos em paralelo. Quando um ramo de trabalho estiver concluido, ele pode fundir (*merge*) com o ramo de trabalho que quiser, por exemplo o ramo mestre, ou o ramo de produção. Existe para Linux, Mac e Windows.
+- **git** é uma ferramenta de versionamento e desenvolvimento paralelo (colaborativo) em que cada colaborador pode ter um ou mais ramos de trabalho (*branch*) e pode mantê-los todos em paralelo. Quando um ramo de trabalho estiver concluido, ele pode fundir (*merge*) com o ramo de trabalho que quiser, por exemplo o ramo mestre, ou o ramo de produção. Existe para Linux, Mac e Windows.
 
-- github é um site de desenvolvimento colaborativo e compartilhamento de repositórios. Ele é baseado em um servidor de arquivos executando git e permitindo que desenvolvedores editem, armazenem, compartilhem, comuniquem, divulguem repositórios e socializem em torno deles. No github um repositório é uma área de armazenamento de arquivos e um projeto permite usar, além do repositório, ferramentas de gerenciamento, como quadros e mensagens - semelhante ao Trello. 
+- **github** é um site de desenvolvimento colaborativo e compartilhamento de repositórios. Ele é baseado em um servidor de arquivos executando git e permitindo que desenvolvedores editem, armazenem, compartilhem, comuniquem, divulguem repositórios e socializem em torno deles. No github um repositório é uma área de armazenamento de arquivos e um projeto permite usar, além do repositório, ferramentas de gerenciamento, como quadros e mensagens - semelhante ao Trello. 
 
 Entendida a diferença, *instale o git* passa a ser uma frase que faz sentido... :)
 
@@ -55,7 +65,7 @@ Talvez explicar a mesma coisa por outra fonte ajude a entender melhor. Pode tent
 Depois de clonar o repositório, coloquei as instruções no *README.md* usando o editor online. Isto deixou o meu arquivo local atrasado em relação à versão no servidor. Para re-sincronizar:
 
 - git fetch
-- git merge (acabei de ver que git checkout dá um aviso que o ramo local está atrasado e recomenda usar git pull. Usei git pull e re-sincronizou)
+- git merge (acabei de ver que git checkout dá um aviso que o ramo local está atrasado e recomenda usar git pull. Usei git pull e re-sincronizou. *git pull equivale a git fetch seguido de git merge*, segundo a [documentação](https://git-scm.com/docs/git-pull))
 
 Talvez explicar a mesma coisa por outra fonte ajude a entender melhor. Pode tentar [a documentação do github sobre sincronizar arquivos locais](https://help.github.com/pt/github/using-git/getting-changes-from-a-remote-repository)
 
@@ -200,7 +210,7 @@ To https://github.com/camilabezerril/ImageCV.git
 
 ## Comentários
 
-(comentário: este editor de markdown é bem legal - pelo menos o bold e o itálico ele formata WYSIWYG).
+(comentário: este editor de markdown (editor online do github) é bem legal - pelo menos o bold e o itálico ele formata WYSIWYG).
 
 (comentário 2: a palavra *é* pode ser usada para dar a definição de dicionário de algo ou para dar a percepção de quem escreve sobre aquilo que ele está descrevendo, além de outros usos. Fique atento!)
 
