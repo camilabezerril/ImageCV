@@ -47,7 +47,7 @@ fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git branch -a
 ```
 Vale notar que existe um ramo *master*, local e um ramo *master* remoto. O ramo em que estou é assinalado por um asterisco.
 
-Com o requisito de partir de um ramo sincronizado (fiz *add, commit e push* ), o comando ```git branch <nome>``` cria um novo ramo de nome *<nome>*. Com este comando, ele é criado sincronizado com o ramo em que se está, mas ainda não se mudou para ele, como é possível notar abaixo. Para mudar para o ramo criado, usa-se ```git checkout <nome>```.
+Com o requisito de partir de um ramo sincronizado (fiz *add, commit e push* ), o comando ```git branch <nome>``` cria **localmente** um novo ramo de nome *<nome>*. Com este comando, ele é criado sincronizado com o ramo em que se está, mas ainda não se mudou para ele, como é possível notar abaixo. Para mudar para o ramo criado, usa-se ```git checkout <nome>```.
 
 
 ```
@@ -69,6 +69,22 @@ fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$
 
 (nota: escrevi e salvei este conteúdo com *RevisaoFN* como ramo ativo. Mas este arquivo deveria ser atualizado direto no master pois só eu edito este arquivo. Isto quer dizer que salvei o arquivo num ramo diferente do que eu queria. Como não atualizei, se eu quiser mudar de ramo agora usando *git checkout ...* serei impedido. Posso comitar neste ramo, mas quando eu fizer *pull request* deste ramo, obrigarei meus colaboradores a revisar este arquivo, o que não é necessário. Jogar fora as alterações *thrashing* não é o que eu quero. A solução é *stash*: *git stash*, troca de ramo, *git stash apply*, conforme [sugestão](https://blog.cedrotech.com/git-o-minimo-que-voce-precisa-saber-para-trabalhar-em-equipe-parte-2/) )
 
+A dupla de comandos 
+
+```
+git branch <nome>
+git checkout <nome>
+
+```
+
+pode ser substituída por
+```
+git checkout -b <nome>
+```
+
+Para sincronizar (ou monitorar, ou track) o novo ramo, ativar o ramo (usando *checkout*) e usar o comando *git push*:
+
+Algumas explicações interessantes estão em [freecodecamp](https://www.freecodecamp.org/forum/t/push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too/13222)
 
 ## Fazer ajustes
 
@@ -81,7 +97,6 @@ fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$
 ## Outros fluxos de trabalho
 
 
-https://blog.cedrotech.com/git-o-minimo-que-voce-precisa-saber-para-trabalhar-em-equipe-parte-2/
 https://gist.github.com/blackfalcon/8428401
 https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 https://www.atlassian.com/git/tutorials/comparing-workflows#!workflow-gitflow

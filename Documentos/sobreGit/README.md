@@ -2,15 +2,19 @@
 
 ## Sobre esta página
 
-Estou começando a trabalhar mais seriamente com git e github. Esta página é uma mistura de registro de experiência com tutorial. 
+Estou começando a trabalhar mais seriamente com git e github. Esta página é uma mistura de registro de experiência com tutorial. Acho que é útil antes de começar a falar de ramos (branches), que geralmente é onde a maioria dos tutoriais básicos de git começa, ou quer chegar rápido.
 
-Já tentei passar da superfície do uso do git algumas vezes e sei, por experiência, que tentar sozinho a partir dos livros e sites é difícil... não sei bem o motivo, talvez porque quis começar pela teoria de funcionamento e a documentação para isso é [pouco atraente](https://git-scm.com/book/pt-br/v2/Git-Branching-Remote-Branches). Vi também que [outros desenvolvedores perceberam o mesmo](https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c). O conteúdo, em termos de comandos e seus usos são muito parecidos com o que apresento aqui, mas o ponto de partida, narrativa e destaques são diferentes. Também tem alguns diagramas bastante elucidativos.
+Já tentei passar da superfície do uso do git algumas vezes e sei, por experiência, que tentar sozinho a partir dos livros e sites é difícil... não sei bem o motivo, talvez porque quis começar pela teoria de funcionamento e a documentação para isso é [pouco atraente](https://git-scm.com/book/pt-br/v2/Git-Branching-Remote-Branches). Vi também que [outros desenvolvedores sentiram a mesma dificuldade](https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c). O conteúdo do link, em termos de comandos e seus usos são muito parecidos com o que apresento aqui, mas o ponto de partida, narrativa e destaques são diferentes. Também tem alguns diagramas bastante elucidativos.
 
 Aqui, situação de partida é: um desenvolvedor, um ramo de trabalho, um repositório remoto (o github). O desenvolvedor pode trabalhar a partir de vários lugares e em cada um ter um repositório local.
 
 A situação de partida permite aprender e testar os comandos do git, sem precisar preocupar-se com preservar o trabalho de outras pessoas, ou simular outras pessoas, ou precisar da ajuda de outras pessoas... mas não explora as principais situações de desenvolvimento colaborativo para as quais git foi feito.
 
 Se você quiser ir direto para [ramos (branches) e como isso funciona, pode vir por aqui (e voltar para cá, se achar que precisa :)](ramos.md)
+
+Se quiser saber sobre alternativas de fluxos de trabalho usando git:
+[atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows#!workflow-gitflow)
+
 
 ## Motivação
 
@@ -207,6 +211,16 @@ To https://github.com/camilabezerril/ImageCV.git
 ## Fluxogramas
 
 ![](./git2.png)
+
+
+## Outras referências
+
+
+[gist-blackfalcon basic tutorial](https://gist.github.com/blackfalcon/8428401)
+
+[cedrotech1](https://blog.cedrotech.com/git-o-minimo-que-voce-precisa-saber-para-trabalhar-em-equipe/)
+
+[cedrotech2](https://blog.cedrotech.com/git-o-minimo-que-voce-precisa-saber-para-trabalhar-em-equipe-parte-2/)
 
 ## Comentários
 
