@@ -107,7 +107,7 @@ To push the current branch and set the remote as upstream, use
 fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ 
 ```
 
-![](Capturadetelade2020-06-05-20-38-20.png)
+![](screenshots/Capturadetelade2020-06-05-20-38-20.png)
 
 Isso equivale ao que está no freecodecamp, então mais um ponto para o git.
 
@@ -133,11 +133,9 @@ fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$
 
 Depois que fiz isso o novo branch apareceu no repositório do projeto:
 
-![](Capturadetelade2020-06-0520-45-51.png)
+![](screenshots/Capturadetelade2020-06-0520-45-51.png)
 
 Lembre-se do botão "Compare & pull request"...
-
-
 
 ## Avisar os colegas
 
@@ -145,13 +143,13 @@ Para avisar os colegas que você tem uma versão e quer fundir com outra (no cas
 
 Usei a interface web do github, clicando em *Compare & Pull Request*. Não sei se tem jeito de fazer isso localmente em linha de comando. Apareceu a tela abaixo:
 
-![](Capturadetelade2020-06-06-10-10-39.png)
+![](screenshots/Capturadetelade2020-06-06-10-10-39.png)
 
 Importante que as diferenças são marcadas e apresentadas. Acho que dá para fazer isso com *git show*, mas não testei.
 
 Preenchi a mensagem, acrescentei pessoas para a revisão (na caixa *reviewers*, na lateral direita) e enviei o PR. No histórico aparece:
 
-![](Capturadetelade2020-06-06-10-12-07.png)
+![](screenshots/Capturadetelade2020-06-06-10-12-07.png)
 
 (**nota**: comecei a escrever este trecho umas 12:20 do dia 06-06-2020. 
 
@@ -166,6 +164,24 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 ```
 notei que umas imagens tinham *timestamps* de 12:36 - fiquei intrigado pois não fui eu... acho que entendi: Coloquei os arquivos ontem, mas não chequei se os links estavam certos - eu erro muito os nomes dos links. Algum colega tentou navegar, achou o link quebrado, consertou e atualizou o *remote-master*, aí eu fiz checkout e peguei a versão atualizada!
+
+fiz um push e pedi o log...
+
+... parece que não é o que pensei... usei *git log* e vi:
+
+```
+commit f4b28ef2e10d810a001669d95adaf867d77b00c9 (HEAD -> master, origin/master, origin/HEAD)
+Author: FNakano <fnakano1970@gmail.com>
+Date:   Sat Jun 6 13:10:20 2020 -0300
+
+    acrescentei informação sobre pull request
+
+commit 08728977b8d3d58f0addc61168d209dddf86e2a2
+Author: FNakano <fnakano1970@gmail.com>
+Date:   Fri Jun 5 21:12:16 2020 -0300
+
+    atualização do sobreGit para a parte de Fazer Ajustes em documentos de colaboradores
+```
 
 )
  
