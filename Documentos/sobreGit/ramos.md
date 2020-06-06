@@ -135,9 +135,40 @@ Depois que fiz isso o novo branch apareceu no repositório do projeto:
 
 ![](Capturadetelade2020-06-0520-45-51.png)
 
+Lembre-se do botão "Compare & pull request"...
+
+
 
 ## Avisar os colegas
 
+Para avisar os colegas que você tem uma versão e quer fundir com outra (no caso com o ramo master), faz-se um *pull request* ou ***PR***. Este é um recurso dos ambientes colaborativos, como github e bitbucket ([pesquisei um pouco sobre as ferramentas e empresas.](versionamento.md))
+
+Usei a interface web do github, clicando em *Compare & Pull Request*. Não sei se tem jeito de fazer isso localmente em linha de comando. Apareceu a tela abaixo:
+
+![](Capturadetelade2020-06-06-10-10-39.png)
+
+Importante que as diferenças são marcadas e apresentadas. Acho que dá para fazer isso com *git show*, mas não testei.
+
+Preenchi a mensagem, acrescentei pessoas para a revisão (na caixa *reviewers*, na lateral direita) e enviei o PR. No histórico aparece:
+
+![](Capturadetelade2020-06-06-10-12-07.png)
+
+(**nota**: comecei a escrever este trecho umas 12:20 do dia 06-06-2020. 
+
+Enquanto estava escrevendo, lembrei de entrar na pasta checar em que ramo eu estava (com *git branch*) vi que estava no ramo de revisão, então troquei para o ramo master ( *git checkout master*) 
+
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git branch
+* RevisaoFN
+  master
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+```
+notei que umas imagens tinham *timestamps* de 12:36 - fiquei intrigado pois não fui eu... acho que entendi: Coloquei os arquivos ontem, mas não chequei se os links estavam certos - eu erro muito os nomes dos links. Algum colega tentou navegar, achou o link quebrado, consertou e atualizou o *remote-master*, aí eu fiz checkout e peguei a versão atualizada!
+
+)
+ 
 ## Discutir
 
 ## Fundir versões
