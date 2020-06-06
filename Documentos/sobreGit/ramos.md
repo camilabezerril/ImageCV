@@ -88,6 +88,54 @@ Algumas explicações interessantes estão em [freecodecamp](https://www.freecod
 
 ## Fazer ajustes
 
+Fiz sugestões sobre um documento de um colaborador no branch que criei - recebi uma mensagem de erro e uma sugestão.
+
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV/Documentos$ gedit ComoCriarExtensao.md &
+[1] 11483
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV/Documentos$ cd ..
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git add .
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git commit -m "primeira revisão e pedido de ajustes em ComoCriarExtensao"
+[RevisaoFN 18c3eed] primeira revisão e pedido de ajustes em ComoCriarExtensao
+ 1 file changed, 26 insertions(+), 5 deletions(-)
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git push
+fatal: The current branch RevisaoFN has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin RevisaoFN
+
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ 
+```
+
+![](Capturadetelade2020-06-05-20-38-20.png)
+
+Isso equivale ao que está no freecodecamp, então mais um ponto para o git.
+
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ git push --set-upstream origin RevisaoFN 
+Username for 'https://github.com': fnakano
+Password for 'https://fnakano@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.30 KiB | 1.30 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'RevisaoFN' on GitHub by visiting:
+remote:      https://github.com/camilabezerril/ImageCV/pull/new/RevisaoFN
+remote: 
+To https://github.com/camilabezerril/ImageCV.git
+ * [new branch]      RevisaoFN -> RevisaoFN
+Branch 'RevisaoFN' set up to track remote branch 'RevisaoFN' from 'origin'.
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/CV$ 
+```
+
+Depois que fiz isso o novo branch apareceu no repositório do projeto:
+
+![](Capturadetelade2020-06-0520-45-51.png)
+
+
 ## Avisar os colegas
 
 ## Discutir
