@@ -45,6 +45,9 @@ Uma **extensão** do App Inventor é um componente criado por um desenvolvedor i
 
 **A falta de um tutorial em português pode ser barreira para seu uso com crianças brasileiras.**
 
+https://cacm.acm.org/magazines/2019/8/238340-block-based-programming-in-computer-science-education/fulltext
+https://en.scratch-wiki.info/wiki/Block-Based_Coding
+
 )
 
 ## Como instalar a extensão
