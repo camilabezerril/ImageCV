@@ -3,11 +3,11 @@
 
 ## Visão geral (acho que isto vai para outro lugar...)
 
-Extensões do App Inventor são programas que acrescentam alguma função personalizada, em geral, não disponível nos blocos já existentes nem atingível pela composição de blocos já existentes.
+Extensões do App Inventor são programas que acrescentam alguma funcionalidade, em geral, não disponível nos blocos já existentes nem atingível pela composição de blocos já existentes.
 
-Estas extensões são *invisíveis*, no sentido que não podem ser componentes da interface gráfica com o usuário (GUI).
+Estas extensões não podem ser componentes da interface gráfica com o usuário (GUI). Por isso às vezes são chamadas *invisíveis*.
 
-A extensão do nome do arquivo que contém uma extensão do App Inventor é *aix*. É algo como nome.aix.
+A extensão do nome do arquivo que contém uma extensão do App Inventor é *aix*. É algo como `nome.aix`.
 
 ## Como desenvolver 
 
@@ -23,6 +23,7 @@ Para possibilitar o desenvolvimento da extensão, as seguintes ferramentas devem
 
 - **Java JDK**
   - [Download aqui](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
+    * tem a questão sobre jdk8 versus jdk10 e android8 versus android 10 que talvez possa ser mencionada aqui...* 
 - **Git**
   - [Download aqui](https://git-scm.com/)
 - **Apache Ant**
@@ -31,7 +32,8 @@ Para possibilitar o desenvolvimento da extensão, as seguintes ferramentas devem
 Apache Ant é uma biblioteca Java e ferramenta de linha de comando essencial que assiste na compilação
 dos arquivos da extensão em conjunto com os do App Inventor.
 
-* onde entra a questão do gradle??*
+* onde entra a questão do gradle?*
+
 
 Após a instalação das ferramentas anteriores, as variáveis de ambiente devem ser acertadas nas propriedades do sistema
 no painel de controle do Windows:
