@@ -10,11 +10,14 @@ Aqui, situação de partida é: um desenvolvedor, um ramo de trabalho, um reposi
 
 A situação de partida permite aprender e testar os comandos do git, sem precisar preocupar-se com preservar o trabalho de outras pessoas, ou simular outras pessoas, ou precisar da ajuda de outras pessoas... mas não explora as principais situações de desenvolvimento colaborativo para as quais git foi feito.
 
-Se você quiser ir direto para [ramos (branches) e como isso funciona, pode vir por aqui (e voltar para cá, se achar que precisa :)](ramos.md)
+Se você quiser ir direto para [ramos (branches) e como isso funciona, pode vir por aqui (e voltar para cá, se achar que precisa :)](ramos.md). Este também é o próximo tópico.
 
-Se quiser saber sobre alternativas de fluxos de trabalho usando git:
+Se estiver mais interessado em gerenciar algum desenvolvimento e quiser saber sobre alternativas de fluxos de trabalho usando git:
 [atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows#!workflow-gitflow)
 
+Tentarei manter cada página o mais enxuta possível, para manter a leitura rápida, objetiva e atraente. Isto não é tão fácil pois à medida que vou entendendo mais sobre o assunto, tendo a querer explorar mais aspectos e documentá-los. Isto pode ser feito nas páginas existentes relacionadas ao aspecto a documentar, mas isto alonga, adensa, enche as páginas com alternativas - elas passam a refletir o amadurecimento de quem escreve, que era iniciante, e supre menos a necessidade do iniciante - que é o público que quero atingir. Há opções para cumprir os dois objetivos: uma é criar "fotografias" - clones de versões mais antigas e simples. Outra é dar aos leitores o acesso a todas as versões. Outra é manter as páginas simples e acrescentar a elas links para o que for se aprendendo.
+
+Gosto da última.
 
 ## Motivação
 

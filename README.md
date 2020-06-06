@@ -10,3 +10,8 @@ Navegue para [Como criar extensões do app Inventor](Documentos/ComoCriarExtensa
 Navegue para [Como a extensão foi codificada](Documentos/AImplementar.md) para ver como chegou-se à esta versão do código (escolha de tipos de dados, escolhas de funcionamento dos blocos, ...).
 
 Navegue para [Como github foi usado neste projeto](Documentos/sobreGit/README.md) para ver que recursos de github foram usados neste projeto. Pode ser um bom guia para começar a usar **git** e **github**.
+
+## Apresentação (contexto)
+
+App Inventor é uma ferramenta baseada em programação por blocos para criar *apps* para Android.
+
