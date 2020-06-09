@@ -211,6 +211,10 @@ To https://github.com/camilabezerril/ImageCV.git
 
 [estendido](https://www.markdownguide.org/extended-syntax/)
 
+[cheatsheet de outro usuário github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+[Do próprio github para tabelas](https://help.github.com/pt/github/writing-on-github/organizing-information-with-tables)
+
 ## Fluxogramas
 
 ![](./git2.png)
