@@ -24,7 +24,6 @@ Para possibilitar o desenvolvimento da extensão, as seguintes ferramentas devem
 
 - **Java JDK**
   - [Download aqui](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
-    * tem a questão sobre jdk8 versus jdk10 e android8 versus android 10 que talvez possa ser mencionada aqui...*
 - **Git**
   - [Download aqui](https://git-scm.com/)
 - **Apache Ant**
