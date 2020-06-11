@@ -7,7 +7,7 @@ Fique nesta página se quiser criar no app inventor um app de celular que usa a 
 
 Navegue para [Como criar extensões do app Inventor](Documentos/ComoCriarExtensao.md) para ver o que foi feito para criar a extensão (setup de IDE, inclusão de bibliotecas, ...).
 
-Navegue para [Como a extensão foi codificada](Documentos/AImplementar.md) para ver como chegou-se à esta versão do código (escolha de tipos de dados, escolhas de funcionamento dos blocos, ...).
+Navegue para [Como a extensão foi codificada](Documentos/ExtensaoImageCV.md) para ver como chegou-se à esta versão do código (escolha de tipos de dados, escolhas de funcionamento dos blocos, ...).
 
 Navegue para [Como github foi usado neste projeto](Documentos/sobreGit/README.md) para ver que recursos de github foram usados neste projeto. Pode ser um bom guia para começar a usar **git** e **github**.
 
@@ -53,7 +53,3 @@ https://en.scratch-wiki.info/wiki/Block-Based_Coding
 ## Como instalar a extensão
 
 ## Como usar a extensão em um app simples
-
-
-
-
