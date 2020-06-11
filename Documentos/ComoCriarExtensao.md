@@ -1,19 +1,20 @@
 # Como criar extensões do App Inventor
 ---
 
-## Visão geral (acho que isto vai para outro lugar...)
+## Visão geral
 
-Extensões do App Inventor são programas que acrescentam alguma funcionalidade, em geral, não disponível nos blocos já existentes nem atingível pela composição de blocos já existentes.
+Extensões do App Inventor são programas que acrescentam alguma funcionalidade, em geral, não disponível nos blocos já existentes e nem atingível pela composição de blocos já existentes.
 
-Estas extensões não podem ser componentes da interface gráfica com o usuário (GUI). Por isso às vezes são chamadas *invisíveis*.
+Estas extensões não podem ser componentes da interface gráfica com o usuário (GUI). Por isso, às vezes são chamadas *invisíveis*.
 
 A extensão do nome do arquivo que contém uma extensão do App Inventor é *aix*. É algo como `nome.aix`.
 
-## Como desenvolver 
+## Como desenvolver
 
-As extensões do App Inventor são mantidas localmente: o ambiente de desenvolvimento é instalado e executado no computador do desenvolvedor (ié localmente), o código-fonte fica armazenado localmente. Por isso é necessário fazer alguns ajustes no computador.
+As extensões do App Inventor são mantidas localmente: o ambiente de desenvolvimento é instalado e executado no computador do desenvolvedor (ié localmente) e o código-fonte fica armazenado neste. Por isso, é necessário fazer alguns ajustes no computador.
 
-Um conjunto de arquivo-fonte são necessário para definir objetos para comunicação entre a nova extensão e os blocos já existentes no App Inventor. Eles são disponibilizados através do [github](github.com). A forma mais fácil de obtê-los é [clonando o repositório do App Inventor](A definir). 
+Um conjunto de arquivo-fonte é necessário para definir objetos para comunicação entre a nova extensão e os blocos já
+ existentes no App Inventor. Ele é disponibilizado através do [github](github.com). A forma mais fácil de obtê-lo é [clonando o repositório do App Inventor](https://github.com/mit-cml/appinventor-sources.git).
 
 Em seguida, há uma sistematização do procedimento para obter uma extensão.
 
@@ -23,7 +24,7 @@ Para possibilitar o desenvolvimento da extensão, as seguintes ferramentas devem
 
 - **Java JDK**
   - [Download aqui](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
-    * tem a questão sobre jdk8 versus jdk10 e android8 versus android 10 que talvez possa ser mencionada aqui...* 
+    * tem a questão sobre jdk8 versus jdk10 e android8 versus android 10 que talvez possa ser mencionada aqui...*
 - **Git**
   - [Download aqui](https://git-scm.com/)
 - **Apache Ant**
@@ -31,9 +32,6 @@ Para possibilitar o desenvolvimento da extensão, as seguintes ferramentas devem
 
 Apache Ant é uma biblioteca Java e ferramenta de linha de comando essencial que assiste na compilação
 dos arquivos da extensão em conjunto com os do App Inventor.
-
-* onde entra a questão do gradle?*
-
 
 Após a instalação das ferramentas anteriores, as variáveis de ambiente devem ser acertadas nas propriedades do sistema
 no painel de controle do Windows:
@@ -47,26 +45,21 @@ _JAVA_OPTIONS | -Xmx1024m
 CLASSPATH | %ANT_HOME%\lib;%JAVA_HOME%\lib
 Path | ;%ANT_HOME%\bin;%JAVA_HOME%\bin
 
-* tem alguma referência (link) do app inventor, ou outro que contém esta informação? seria bom referenciá-lo aqui *
-
 Por meio do Git, os arquivos do App Inventor serão clonados:
 
-1. Selecione o local do arquivos, *no meu caso o local é...*
+1. Selecione o local dos arquivos, no meu caso o local é: C:\
 2. Clique com o botão direito e em `Git bash here`
 3. Na linha de comando digite: `git clone https://github.com/mit-cml/appinventor-sources.git`
 
 ### Localização da extensão
 
-Abrindo a pasta **App Inventor** *é a pasta criada no ítem 1?*  como um projeto em um Ambiente de Desenvolvimento Integrado (IDE),
-as extensões por padrão devem ser colocadas no caminho: `appinventor\components\src\com\google\appinventor\components\runtime`
+Abrindo a pasta **appinventor**, dentro da pasta recém-clonada, como um projeto em um Ambiente de Desenvolvimento Integrado
+(IDE), as extensões por padrão devem ser colocadas no caminho:
+`appinventor\components\src\com\google\appinventor\components\runtime`
 
-*que IDE você usou?*
-* na parte sobre boofcv, pode ser informativo mostrar a árvore das pastas do projeto *
-
+A IDE que utilizei para o desenvolvimento da extensão é a [IntelliJ](https://www.jetbrains.com/pt-br/idea/) da JetBrains.
 
 ### O Código-fonte da extensão
-
-* aqui vai ser um "olá mundo"? *
 
 #### Importação de pacotes/classes do App Inventor
 
