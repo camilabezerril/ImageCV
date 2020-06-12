@@ -61,14 +61,20 @@ de Visão Computacional, Inteligência Artificial e Construção de Aplicativos.
 
 Trata-se do desenvolvimento de componentes de software utilizando metodologia ágil. Nas primeiras semanas o estudante conhecerá colegas em diferentes estágios do seu trabalho de Iniciação Científica, que podem ser fontes de informação ou facilitadores para seu projeto. Nas semanas subsequentes, o estudante desenvolverá suas atividades recebendo metas semanalmente à medida que cumpre as metas anteriores, em um ciclo de desenvolvimento. Ao final espera-se entregar todos os resultados.
 
-## Resultados e indicadores de avaliação
+## Resultados
 
-1. Site documentando o projeto;
-2. Entrega do primeiro protótipo no fim de Janeiro;
+### Substituição de OpenCV por BoofCV.
+### Compilação de ImageCV.
+### Uso da extensão - Construção de app para celular usando ImageCV e App Inventor.
+
+## Sumário de resultados - Indicadores de avaliação
+
+1. [Site documentando o projeto](https://github.com/camilabezerril/ImageCV/tree/master)
+2. [Entrega do primeiro protótipo no fim de Janeiro](appcv.ImageCV.aix);
 3. Submissão de resumo ao WICSI no fim de Fevereiro;
-4. Entrega de relatório intermediário no fim de Março;
-5. Entrega da última versão da extensão em Agosto
-6. Entrega do relatório final em Agosto
+4. [Entrega de relatório intermediário no fim de Março](DocumentacaoProjeto.pdf);
+5. [Entrega da última versão da extensão em Agosto](appcv.ImageCV.aix);
+6. [Entrega do relatório final em Agosto](relatorio.md);
 7. Submissão do resumo ao SIICUSP em Outubro.
 
 ## Conclusões

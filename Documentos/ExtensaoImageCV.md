@@ -39,7 +39,7 @@ Os pacotes utilizados pela extensão atualmente são:
 Após serem baixados, os pacotes que serão utilizados devem ser colocados na pasta `appinventor\lib`.
 Estes podem ser colocados em uma subpasta com nome a ser escolhido.
 
-Para que seja compilado devidamente, o arquivo build.xml, localizado dentro da pasta `appinventor\components`, deve ser modificado.
+Para que seja compilado devidamente, o arquivo [build.xml](../build.xml), localizado dentro da pasta `appinventor\components`, deve ser modificado.
 
 A seguinte formatação deve ser colocada na seção CopyComponentLibraries target
 (Há um comentário com uma indicação: \<!-- Add extension libraries here \-->) para cada pacote adicionado à pasta lib que será utilizado:
