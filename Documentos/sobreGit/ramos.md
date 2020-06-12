@@ -191,6 +191,7 @@ Date:   Fri Jun 5 21:12:16 2020 -0300
 
 Neste momento as possibilidades se multiplicam: pode haver vários PRs para fundir, o ramo master pode ter avançado antes de alguém atender o PR, pode ocorrer um PR em um ramo que tem um PR pendente, ... aqui vamos no mais simples primeiro: foi PR único que será fundido com o master mais recente.
 
+
 É possível atribuir a tarefa de fundir versões a outros colaboradores. Por simplicidade, digamos que quem fez o PR é quem vai fundir.
 
 O jeito mais fácil, que é suficiente quando as consequências de erros são pequenas, ou para equipes pequenas, ou para projetos com alta localidade (cada desenvolvedor dificilmente modifica arquivos de outro, consequentemente ocorrem poucos conflitos), é fundir diretamente no master do repositório remoto usando as ferramentas web do repositório.
@@ -205,6 +206,15 @@ https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/ch
 https://gist.github.com/adam-p/15413fabef6cffecd897
 https://confluence.atlassian.com/bbkb/how-to-locally-fetch-and-checkout-a-pull-request-724402529.html
 https://www.atlassian.com/git/articles/pull-request-proficiency-fetching-abilities-unlocked
+
+
+### O que fazer quando um pull request fica ultrapassado?
+
+De semana passada para esta, o colaborador recebeu o pull request, trocamos mensagens, ele resolveu as solicitações e fez *push* diretamente no master. Está tudo atendido, o pull request não faz sentido e o merge dos branches, assunto do pull request, já não é mais necessario. O que fazer?
+
+O github tem o recurso de deletar um pull request.
+
+https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/closing-a-pull-request
 
 ## Outros fluxos de trabalho
 
