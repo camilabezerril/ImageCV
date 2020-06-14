@@ -85,3 +85,33 @@ Deve aparecer na aba a extensão ImageCV.
 
 ## Como usar a extensão em um app simples
 
+
+## Referência dos blocos de ImageCV
+
+
+Imagem para recortar os blocos e ilustrar.
+
+![](screenshots/3.jpg)
+
+
+```
+@DesignerComponent(version = 1,
+        category = ComponentCategory.EXTENSION,
+        description = "Componente para Visao Computacional no App Inventor",
+        nonVisible = true,
+        iconName = "images/extension.png")
+
+    @SimpleFunction(description = "Substitui os tons de uma cor por preto por meio do sistema HSV [FORMATO: 0-6.28, 0-1.0]")
+    public void stepHSV(String picturePath, String HSmin, String HSmax){
+
+    @SimpleFunction(description = "Converte RGB em HSV [FORMATO:x,x,x]")
+    public void converteRGBtoHSV(String RGB) {
+
+    @SimpleFunction(description = "Reconhece elipses em uma imagem")
+    public void reconheceElipses(String picturePath){
+
+    @SimpleFunction(description = "Reconhece polígonos em uma imagem, minLados >= 3 e maxLados <= 20")
+    public void reconhecePoligonos(String picturePath, int minLados, int maxLados) {
+```
+
+
