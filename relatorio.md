@@ -65,7 +65,10 @@ Trata-se do desenvolvimento de componentes de software utilizando metodologia á
 
 ### Substituição de OpenCV por BoofCV.
 ### Compilação de ImageCV.
+[Conteúdo detalhado](documentos/ExtensaoImageCV.md)
+
 ### Uso da extensão - Construção de app para celular usando ImageCV e App Inventor.
+[Conteúdo detalhado](README.md)
 
 ## Sumário de resultados - Indicadores de avaliação
 
