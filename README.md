@@ -86,7 +86,85 @@ Deve aparecer na aba a extensão ImageCV.
 ## Como usar a extensão em um app simples
 
 
+
+
 ## Referência dos blocos de ImageCV
+
+### Por que HSV ao invés de RGB.
+
+Em Visão Computacional, um componente que identifica uma determinada cor, recebe a informação sobre a cor a analisar e aplica uma fórmula. O resultado da aplicação da fórmula indica se a cor analisada é a determinada cor ou se a cor analisada não é a determinada cor.
+
+Para manter o ImageCV simples para o programador que usa App Inventor e simples para desenvolvedores que forem aperfeiçoá-lo, os parâmetros passados para os blocos são números e não fórmulas. Acredite, construir boas fórmulas pode não ser fácil e o programador que usa App Inventor ficaria encarregado disso.
+
+RGB e HSV são duas formas de codificar cores. No RGB, as cores são decompostas em componentes de cor, sendo estas as intensidades de vermelho (R), verde (G) e azul (B). No ImageCV, as intensidades de R, G e B vão de 0 a 255. Por exemplo:
+
+**R** | **G** | **B** | Nome da cor
+------|-------|-------|------------
+0 | 0 | 0 | preto
+255 | 255 | 255 | branco
+
+255 | 0 | 0 | vermelho intenso
+120 | 0 | 0 | vermelho médio
+255 | 83 | 0 | laranja-avermelhado (ou vermelho-alaranjado?)
+255 | 203 | 203 | um tom claro de rosa
+255 | 0 | 255 | magenta
+255 | 255 | 0 | amarelo
+0 |200| 0 | um tom claro de verde
+
+Seguindo a idéia de manter o ImageCV simples, na mais complexa das alternativas, permitiríamos valores mínimos e máximos de R, G e B. Desta forma, se o programador quisesse um vermelho, poderia usar algo como min={200,0,0} max={255, 20, 20}. Esta escolha deixaria de fora tanto os vermelhos mais escuros quanto os rosas mais claros, os vermelhos alaranjados, os vermelhos azulados,...
+
+> O ponto é que usar RGB e colocar mínimo e máximo para definir cores leva a resultados corretos (dada a codificação), mas difíceis para pessoas entenderem, considerando a forma como percebem e categorizam cores.
+
+Na codificação HSV, H coresponde à tonalidade, S à saturação e V a "claridade". H codifica tons: vermelhos, amarelos, verdes,... S codifica quão pigmentada é. Valores altos correspondem a cores intensas, vivas. V codifica se há pouca luz ou luz suficiente. Desta forma, o vermelho tem uma faixa de H, vermelhos pouco saturados (rosa) têm S baixos, vermelhos muito saturados (talvez como o nariz de um palhaço) têm S altos. V tem pouca influência na discriminação de cor.
+
+(**nota** A [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV) explica com mais detalhes.)
+
+(**nota**: os sensores das câmeras, em situações com muita luz, tendem a levar as cores para o branco. Diz-se que o sensor saturou, ou que as cores estão "estouradas". A codificação HSL parece lidar melhor com essa situação que a codificação HSV.)
+
+### stepHSV
+
+picturePath: localização do arquivo de imagem.
+HSMin: valores mínimos de H e S.
+HSMax: valores máximos de H e S.
+
+
+
+### reconhecePoligonos
+
+picturePath: localização do arquivo de imagem.
+minLados: quantidade mínima de lados dos polígonos a identificar (mínimo=3, máximo=20)
+maxLados: quantidade máxima de lados dos polígonos a identificar (mínimo=3, máximo=20)
+
+### reconheceElipses
+
+picturePath: localização do arquivo de imagem.
+
+### converteRGBtoHSV
+
+RGB
+
+### getAltImagePath
+
+### getCaractElipses
+
+### getCaractPoligonos
+
+### getHfromRGBtoHSV
+### getSfromRGBtoHSV
+### getVfromRGBtoHSV
+
+### getListaDeElipses
+
+### getnElipses
+### getnPoligonos
+
+
+### setCaractElipses
+### setCaractPoligonos
+### setnElipses
+### setnPoligonos
+
+
 
 
 Imagem para recortar os blocos e ilustrar.
