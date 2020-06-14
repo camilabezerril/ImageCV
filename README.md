@@ -102,7 +102,6 @@ RGB e HSV são duas formas de codificar cores. No RGB, as cores são decompostas
 ------|-------|-------|------------
 0 | 0 | 0 | preto
 255 | 255 | 255 | branco
-
 255 | 0 | 0 | vermelho intenso
 120 | 0 | 0 | vermelho médio
 255 | 83 | 0 | laranja-avermelhado (ou vermelho-alaranjado?)
