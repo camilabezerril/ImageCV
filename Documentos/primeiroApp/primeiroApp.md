@@ -119,23 +119,25 @@ Abra o leitor de QR-Code, leia o código e clique no link. Um programa pode tran
 
 Como é o programa que você fez, usando sites e instruções confiáveis, deve ser seguro baixá-lo. Se você concorda, responda OK.
 
-![](screenshots/Screenshot_20200614-104534.png)
+![|20%](screenshots/Screenshot_20200614-104534.png)
 
 Depois abra o programa (clique em abrir). Se a notificação sair da tela, entre no navegador em downloads, encontre Ola.apk e dê um duplo-clique sobre ele (isto equivale a clicar em abrir).
 
-![](screenshots/Screenshot_20200614-104651.png)
+![](screenshots/Screenshot_20200614-104604.png)
+
 
 Em seu celular, na tela a seguir, clique em Instalar
 
-![](screenshots/Screenshot_20200614-104604.png)
+![](screenshots/Screenshot_20200614-104610.png)
+
 
 Aguarde o processo de instalação terminar
 
-![](screenshots/Screenshot_20200614-104610.png)
+![](screenshots/Screenshot_20200614-104621.png)
 
 Terminada a instalação clique em abrir
 
-![](screenshots/Screenshot_20200614-104621.png)
+![](screenshots/Screenshot_20200614-104551.png)
 
 Você verá a tela que você criou
 
@@ -143,13 +145,12 @@ Você verá a tela que você criou
 
 Clique na caixa de texto - o teclado aparecerá
 
+![Downloading Image | 1080x1920, 20% ](screenshots/Screenshot_20200614-104651.png)
+
+Digite o texto que quiser e clique no botão, o texto que você digitou aparecerá na Legenda1.
+
 ![](screenshots/Screenshot_20200614-104713.png)
 
-Digite o texto que quiser e clique no botão
-
-![](screenshots/Screenshot_20200614-104551.png)
-
-O texto que você digitou aparecerá na Legenda1.
 
 Parabéns, você completou todos os passos para construir um app Android.
 
