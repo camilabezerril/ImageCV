@@ -207,6 +207,10 @@ To https://github.com/camilabezerril/ImageCV.git
 
 ## Referências sobre markdown
 
+Markdown é uma linguagem simplificada (em relação a HTML) para construir páginas Web com formatação, links e imagens, o que não é possível em texto puro.
+
+Muitos sites, inclusive github, usam markdown e **acrescentam funcionalidades a ela**, logo, o que funciona no markdown de alguns sites pode não funcionar em outros. [Redimensionar imagens](#Redimensionar-imagens) é uma dessas funcionalidades.
+
 [básico](https://www.markdownguide.org/basic-syntax/)
 
 [estendido](https://www.markdownguide.org/extended-syntax/)
@@ -214,6 +218,25 @@ To https://github.com/camilabezerril/ImageCV.git
 [cheatsheet de outro usuário github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 [Do próprio github para tabelas](https://help.github.com/pt/github/writing-on-github/organizing-information-with-tables)
+
+### Redimensionar imagens
+
+No github, em 2020, redimensiona-se imagens pelo uso do tag HTML [referência no Stackoverflow sobre github markdown](https://stackoverflow.com/questions/24383700/resize-image-in-the-wiki-of-github-using-markdown), [referência no projeto do pandoc](https://github.com/jgm/pandoc/issues/2554):
+
+``` html
+<img src="screenshots/Screenshot_20200614-104534.png" height="960" width="540">
+```
+
+Durante algum tempo, lá por 2013, era possível redimensionar de outras formas:
+
+`![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png =250x250)`
+[uupaa github gist](https://gist.github.com/uupaa/f77d2bcf4dc7a294d109)
+
+No markdown usado em outros sites, o redimensionamento pode ser feito de outras formas.
+
+[Discourse](https://meta.discourse.org/t/quick-image-resizing-and-markdown-image-dimensions/66812)
+
+[Stackoverflow](https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown)
 
 ## Fluxogramas
 

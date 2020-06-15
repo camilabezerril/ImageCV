@@ -119,11 +119,7 @@ Abra o leitor de QR-Code, leia o código e clique no link. Um programa pode tran
 
 Como é o programa que você fez, usando sites e instruções confiáveis, deve ser seguro baixá-lo. Se você concorda, responda OK.
 
-[T|20%](screenshots/Screenshot_20200614-104534.png)
-
-<img src="screenshots/Screenshot_20200614-104534.png" height="960" width="540">
-
-![|20%](s
+<img src="screenshots/Screenshot_20200614-104534.png" height="580" width="270">
 
 Depois abra o programa (clique em abrir). Se a notificação sair da tela, entre no navegador em downloads, encontre Ola.apk e dê um duplo-clique sobre ele (isto equivale a clicar em abrir).
 
