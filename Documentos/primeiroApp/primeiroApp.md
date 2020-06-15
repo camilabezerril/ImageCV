@@ -117,9 +117,9 @@ Além de gerar o aplicativo, o App Inventor fornece um link para baixar o aplica
 
 Abra o leitor de QR-Code, leia o código e clique no link. Um programa pode transmitir os dados do celular para alguém, ou, usar o celular para enviar mensagens para os contatos armazenados nele, ou até mesmo danificar o celular. Por isso quem está baixando o programa precisa ter certeza do que está fazendo. Para certificar, aparecerá uma tela para confirmar que você deseja baixar o arquivo que contém seu programa.
 
-Como é o programa que você fez, usando sites e instruções confiáveis, deve ser seguro baixá-lo. Se você concorda, responda OK.
 
-<img src="screenshots/Screenshot_20200614-104534.png" height="580" width="270">
+<img src="screenshots/Screenshot_20200614-104534.png" height="580" width="270"> Como é o programa que você fez, usando sites e instruções confiáveis, deve ser seguro baixá-lo. Se você concorda, responda OK.
+
 
 Depois abra o programa (clique em abrir). Se a notificação sair da tela, entre no navegador em downloads, encontre Ola.apk e dê um duplo-clique sobre ele (isto equivale a clicar em abrir).
 
