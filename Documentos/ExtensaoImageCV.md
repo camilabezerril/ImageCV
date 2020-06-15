@@ -101,8 +101,64 @@ entre outros.
 
 Todas as imagens que passam por processos da extensão são salvas no mesmo caminho: pictures/ImageCV
 
-### Funções relacionadas à visão computacional
+## Funções relacionadas à visão computacional
 
 Note que muitas classes da biblioteca BoofCV utilizam o tipo BufferedImage para processar as imagens, porém esta classe não
 é suportada pelo Android. Alternativamente, a biblioteca apresenta classes que possibilitam a conversão de bitmap para
 tipos de imagens em que a mesma trabalha. Estas classes estão presentes no pacote jar boofcv-android-0.27.
+
+### Marcando cores
+
+Como uma forma de ampliar as informações adquiridas através de uma imagem, é possível a marcação de determinadas cores com o
+método stepHSV. Neste método a imagem é convertida de RGB para o HSV por meio do BoofCV. Este formato possibilita uma maior
+abrangência na captura de cores e uma manipulação das informações mais facilmente. O usuário especifica a cor a ser
+identificada (em formato HSV). Se esta cor for encontrada, os pixels relacionados têm suas cores alteradas para o preto
+(Cor no qual o reconhecimento de figuras geométricas também se torna possível) e o resto da imagem é alterada para a cor branca.
+
+Esta função pode ser chamada diversas vezes para marcar diversas cores, não sendo assim necessário especificar uma cor
+que estaria precisamente na imagem.
+
+### Reconhecimento de elipses
+
+O reconhecimento de elipses ocorre através do método reconheceElipses. Este pode ser feito de duas formas, utilizando do
+reconhecimento de cores em conjunto ou apenas com o método citado. Se há elipses de outras cores que não a preta que devem
+ser também analisadas, é recomendado que o reconhecimento de cores seja utilizado em conjunto para uma melhor análise.
+
+Se agindo em conjunto com o reconhecimento de cores, é possível saber quais as cores primárias mais próximas em cada elipse
+encontrada e ainda, encontrar apenas elipses de uma determinada cor.
+
+Além disso, outras informações, como as coordenadas do centro da elipse e o seu perímetro aproximado, são fornecidas.
+
+### Reconhecimento de polígonos
+
+O reconhecimento de polígonos é feito através dos métodos: reconhecePoligonos, processaPoligonos, renderPolygon.
+Este reconhecimento atua da mesma forma que o de elipses, podendo ser utilizado em conjunto com o reconhecimento de cores
+também. Tanto polígonos convexos como côncavos podem ser analisados. A análise pode ainda ser limitada para polígonos com
+um certo número de vértices ou ainda por uma determinada cor, ambos podendo ser especificados pelo usuário.
+
+Além da informação da cor de cada polígono encontrado, também são fornecidas as coordenadas dos vértices dos polígonos.
+
+### Disponibilização das informações
+
+As informações que passam pelo reconhecimento de figuras geométricas são disponibilizas por meio de uma lista de listas que
+pode ser acessada como uma lista padrão do App Inventor.
+
+As elipses estão contidas em uma lista que possui listas com informações na seguinte ordem: coordenada x do centro,
+coordenada y do centro, cor da elipse, perímetro da elipse.
+
+ Já os polígonos estão contidos em uma lista que possui listas com informações na seguinte ordem: cor do polígono,
+ coordenada x do vértice 1, coordenada y do vértice 1, coordenada x do vértice 2, coordenada y do vértice 2...
+
+ As listas podem ser acessada e usadas de diversas formas, como por exemplo:
+ ListaDeElipses[3].cElipse[2] - Acessando o Cy da Elipse 3 (As iterações do AppInventor começam em 1)
+
+Em programação por blocos, isso seria o equivalente a:
+
+![](./listasAppInventor.png)
+
+ Para conter essas informações foi utilizado a lista primitiva do App Inventor: **YailList**.
+ O código-fonte desta está no caminho:
+ `\appinventor-sources\appinventor\components\src\com\google\appinventor\components\runtime\util\YailList.java`
+
+ Além disso, o número de elipses e de polígonos encontrados estão disponíveis por meio das variáveis `nElipses` e  
+ `nPolígonos`.
