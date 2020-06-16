@@ -9,6 +9,8 @@ Navegue para [Como criar extensões do app Inventor](Documentos/ComoCriarExtensa
 
 Navegue para [Como a extensão foi codificada](Documentos/ExtensaoImageCV.md) para ver como chegou-se à esta versão do código (escolha de tipos de dados, escolhas de funcionamento dos blocos, ...).
 
+Navegue para [Apps de teste](testes/README.md) para baixar os executáveis (apk) e os fontes (aia) dos apps de teste.
+
 Navegue para [Como github foi usado neste projeto](Documentos/sobreGit/README.md) para ver que recursos de github foram usados neste projeto. Pode ser um bom guia para começar a usar **git** e **github**.
 
 ## Apresentação (contexto)
@@ -116,6 +118,8 @@ Seguindo a idéia de manter o ImageCV simples, na mais complexa das alternativas
 
 Na codificação HSV, H coresponde à tonalidade, S à saturação e V a "claridade". H codifica tons: vermelhos, amarelos, verdes,... S codifica quão pigmentada é. Valores altos correspondem a cores intensas, vivas. V codifica se há pouca luz ou luz suficiente. Desta forma, o vermelho tem uma faixa de H, vermelhos pouco saturados (rosa) têm S baixos, vermelhos muito saturados (talvez como o nariz de um palhaço) têm S altos. V tem pouca influência na discriminação de cor.
 
+A biblioteca usada em ImageCV para processamento de cores e formas é BoofCV. A explicação sobre HSV em BoofCV está em (http://boofcv.org/javadoc/boofcv/alg/color/ColorHsv.html)
+
 (**nota** A [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV) explica com mais detalhes.)
 
 (**nota**: os sensores das câmeras, em situações com muita luz, tendem a levar as cores para o branco. Diz-se que o sensor saturou, ou que as cores estão "estouradas". A codificação HSL parece lidar melhor com essa situação que a codificação HSV.)
@@ -126,7 +130,9 @@ picturePath: localização do arquivo de imagem.
 HSMin: valores mínimos de H e S.
 HSMax: valores máximos de H e S.
 
+Retorna em altImagePath a localização do arquivo de imagem segmentado por cor.
 
+baseado em (https://boofcv.org/index.php?title=Example_Color_Segmentation)
 
 ### reconhecePoligonos
 
@@ -134,9 +140,25 @@ picturePath: localização do arquivo de imagem.
 minLados: quantidade mínima de lados dos polígonos a identificar (mínimo=3, máximo=20)
 maxLados: quantidade máxima de lados dos polígonos a identificar (mínimo=3, máximo=20)
 
+O desempenho ótimo é conseguido quando os polígonos são pretos e planos em fundo branco, com iluminação uniforme, sem sombras.
+
+Retorna em altImagePath a localização do arquivo de imagem com os polígonos identificados contornados em vermelho.
+
+Retorna em nPoligonos a quantidade de polígonos encontrada.
+
+Retorna em listaDePoligonos uma lista contendo nPoligonos sub-listas. Cada sub-lista contém a coordenadas dos vértices dos polígonos em ordem: [x1, y1, x2, y2, x3, y3, ..., xn, yn].
+
 ### reconheceElipses
 
 picturePath: localização do arquivo de imagem.
+
+O desempenho ótimo é conseguido quando os polígonos são pretos e planos em fundo branco, com iluminação uniforme, sem sombras.
+
+Retorna em altImagePath a localização do arquivo de imagem segmentado por cor.
+
+Retorna em nElipses a quantidade de elipses encontrada.
+
+Retorna em listaDeElipses uma lista contendo nElipses sub-listas. Uma sub-lista contém: [xcentro, ycentro, "Não Especificado", diâmetro_médio].
 
 ### converteRGBtoHSV
 

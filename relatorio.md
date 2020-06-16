@@ -80,7 +80,10 @@ Trata-se do desenvolvimento de componentes de software utilizando metodologia á
 6. [Entrega do relatório final em Agosto](relatorio.md);
 7. Submissão do resumo ao SIICUSP em Outubro.
 
-## Conclusões
+## Discussão e conclusão
+
+A versão do BoofCV utilizada em ImageCV é 0.27, por questão de compatibilidade entre ambientes de desenvolvimento. A versão atual de BoofCV é 0.36. A documentação da versão 0.27 não foi encontrada, o que dificultou o uso das funções de reconhecimento de polígonos.
+
 ## Referências
 
 BRADSKI, G. (2000) - The OpenCV Library. ​ Dr. Dobb’s Journal of Software Tools ​ .
