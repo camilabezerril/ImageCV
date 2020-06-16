@@ -44,6 +44,19 @@ Uma **extensão** do App Inventor é um componente criado por um desenvolvedor i
 
 ### Imagens que exemplificam usos simples
 
+Há muitas formas de usar e combinar as funcionalisdades do ImageCV. Documentar e exemplificar exaustivamente geraria muita documentação de pouca utilidade.
+
+Supondo que o seu processo de avaliação da utilidade de ImageCV seja:
+
+1. Ver o que ImageCV faz: o que usa como entrada e o que apresenta como saída;
+2. Verificar se há exemplos que se aproximam do uso que deseja;
+2. Experimentar quanto tempo e conhecimento são necessários para começar a usá-lo;
+3. Aprofundar-se nos usos e na documentação para chegar ao uso desejado;
+
+Apresentamos abaixo as imagens usadas nos testes que fizemos e os resultados.
+
+Nas seções seguintes apresentamos como instalar a extensão no App Inventor, como construir, rapidamente, um app usando algumas funcionalidades de ImageCV, a documentação de referência do ImageCV. Lembre-se que há [apps para teste do ImageCV](testes/README.md).
+
 
 
 (**nota**: [um pesquisador da UNICAMP propõe criar uma versão do App Inventor traduzida para português](https://appinventor.mit.edu/explore/blogs/josh/2016/01/mit-0)
@@ -165,6 +178,8 @@ Retorna em listaDeElipses uma lista contendo nElipses sub-listas. Uma sub-lista 
 RGB
 
 ### getAltImagePath
+
+Contém a localização do arquivo de imagem que contém as cores segmentadas ou as elipses ou os polígonos localizados, dependendo do método que foi utilizado.
 
 ### getCaractElipses
 
