@@ -18,7 +18,6 @@ import com.google.appinventor.components.runtime.util.MediaUtil;
 import com.google.appinventor.components.runtime.util.SdkLevel;
 import com.google.appinventor.components.runtime.util.ViewUtil;
 import com.google.appinventor.components.annotations.UsesLibraries;
-import com.google.appinventor.components.annotations.UsesPermissions;
 import com.google.appinventor.components.runtime.*;
 import com.google.appinventor.components.runtime.util.YailList;
 
@@ -75,8 +74,6 @@ import org.ddogleg.struct.FastQueue;
         nonVisible = true,
         iconName = "images/extension.png")
 @SimpleObject(external = true)
-@UsesPermissions(permissionNames = "android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE," +
-        "android.permission.CAMERA")
 @UsesLibraries(libraries = "boofcv-android.jar," + "boofcv-ip.jar,"
         + "ddogleg.jar," + "georegression.jar," + "boofcv-feature.jar," + "ejml-core.jar,"
         + "ejml-ddense.jar," + "ejml-fdense.jar," + "ejml-simple.jar")
@@ -311,63 +308,18 @@ public class ImageCV extends AndroidNonvisibleComponent implements Component {
         salvaAltImage(bitmap);
     }
 
-    /*
-     * RGB -> HSV.
-     * Adds (hue + 360) % 360 for represent hue in the range [0..359].
-     * @param red Red coefficient. Values in the range [0..255].
-     * @param green Green coefficient. Values in the range [0..255].
-     * @param blue Blue coefficient. Values in the range [0..255].
-     * @return HSV color space.
-     */
-
     /**
-     * Converte RGB para HSV
-     */
-    public static float[] RGBtoHSV(int red, int green, int blue) {
-        float[] hsv = new float[3];
-        float r = red / 255f;
-        float g = green / 255f;
-        float b = blue / 255f;
-
-        float max = Math.max(r, Math.max(g, b));
-        float min = Math.min(r, Math.min(g, b));
-        float delta = max - min;
-
-        // Hue
-        if (max == min) {
-            hsv[0] = 0;
-        } else if (max == r) {
-            hsv[0] = ((g - b) / delta) * 60f;
-        } else if (max == g) {
-            hsv[0] = ((b - r) / delta + 2f) * 60f;
-        } else if (max == b) {
-            hsv[0] = ((r - g) / delta + 4f) * 60f;
-        }
-
-        // Saturation
-        if (delta == 0)
-            hsv[1] = 0;
-        else
-            hsv[1] = delta / max;
-
-        //Value
-        hsv[2] = max;
-
-        return hsv;
-    }
-
-    /**
-     * Converte RGB para HSV para o usuário
+     * Converte RGB para HSV para o usuário usando a biblioteca BoofCV
      */
     @SimpleFunction(description = "Converte RGB em HSV [FORMATO:x,x,x]")
     public void converteRGBtoHSV(String RGB) {
         float[] hsv = new float[3];
-        int[] rgbInt = new int[3];
+        float[] rgb = new float[3];
 
         String[] aux = RGB.split(",");
-        for (int i = 0; i < 3; i++) rgbInt[i] = Integer.parseInt(aux[i]);
+        for (int i = 0; i < 3; i++) rgb[i] = Float.parseFloat(aux[i]);
 
-        hsv = RGBtoHSV(rgbInt[0], rgbInt[1], rgbInt[2]);
+        ColorHsv.rgbToHsv(rgb[0], rgb[1], rgb[2], hsv);
 
         Hhsv = hsv[0];
         Shsv = hsv[1];
