@@ -1,10 +1,22 @@
 # Como criar extensões do App Inventor
 ---
 
-## Como elas funcionam
+## Visão geral
 
-As extensões do App Inventor são geridas localmente, para isso é necessário fazer alguns ajustes no computador
-e também a clonagem do repositório do App Inventor. Em seguida, há uma padronização nos códigos a serem desenvolvidos.
+Extensões do App Inventor são programas que acrescentam alguma funcionalidade, em geral, não disponível nos blocos já existentes e nem atingível pela composição de blocos já existentes.
+
+Estas extensões não podem ser componentes da interface gráfica com o usuário (GUI). Por isso, às vezes são chamadas *invisíveis*.
+
+A extensão do nome do arquivo que contém uma extensão do App Inventor é *aix*. É algo como `nome.aix`.
+
+## Como desenvolver
+
+As extensões do App Inventor são mantidas localmente: o ambiente de desenvolvimento é instalado e executado no computador do desenvolvedor (ié localmente) e o código-fonte fica armazenado neste. Por isso, é necessário fazer alguns ajustes no computador.
+
+Um conjunto de arquivo-fonte é necessário para definir objetos para comunicação entre a nova extensão e os blocos já
+ existentes no App Inventor. Ele é disponibilizado através do [github](github.com). A forma mais fácil de obtê-lo é [clonando o repositório do App Inventor](https://github.com/mit-cml/appinventor-sources.git).
+
+Em seguida, há uma sistematização do procedimento para obter uma extensão.
 
 ### Configurando o Ambiente
 
@@ -34,14 +46,17 @@ Path | ;%ANT_HOME%\bin;%JAVA_HOME%\bin
 
 Por meio do Git, os arquivos do App Inventor serão clonados:
 
-1. Selecione o local do arquivos
+1. Selecione o local dos arquivos, no meu caso o local é: C:\
 2. Clique com o botão direito e em `Git bash here`
 3. Na linha de comando digite: `git clone https://github.com/mit-cml/appinventor-sources.git`
 
 ### Localização da extensão
 
-Abrindo a pasta App Inventor como um projeto em um Ambiente de Desenvolvimento Integrado (IDE),
-as extensões por padrão devem ser colocadas no caminho: `appinventor\components\src\com\google\appinventor\components\runtime`
+Abrindo a pasta **appinventor**, dentro da pasta recém-clonada, como um projeto em um Ambiente de Desenvolvimento Integrado
+(IDE), as extensões por padrão devem ser colocadas no caminho:
+`appinventor\components\src\com\google\appinventor\components\runtime`
+
+A IDE que utilizei para o desenvolvimento da extensão é a [IntelliJ](https://www.jetbrains.com/pt-br/idea/) da JetBrains.
 
 ### O Código-fonte da extensão
 
