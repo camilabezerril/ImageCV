@@ -268,9 +268,9 @@ public class ImageCV extends AndroidNonvisibleComponent implements Component {
         //Para que cor (rgb) o tom aplicado pelo usuário está mais semelhante:
         //Duas condições para o vermelho (hue é circular, o vermelho atinge tanto ~6.2 como ~0)
         if (Smax <= 0.1) formaCor = "Branco";
-        else if (Hmin >= 0 && Hmax <= 1.199) formaCor = "Vermelho";
-        else if (Hmin >= 1.2 && Hmax <= 2.619) formaCor = "Verde";
-        else if (Hmin >= 2.62 && Hmax <= 5.299) formaCor = "Azul";
+        else if (Hmin >= 0 && Hmax < 1.2) formaCor = "Vermelho";
+        else if (Hmin >= 1.2 && Hmax < 2.62) formaCor = "Verde";
+        else if (Hmin >= 2.62 && Hmax < 5.3) formaCor = "Azul";
         else if (Hmin >= 5.3 && Hmax <= 6.28) formaCor = "Vermelho";
 
         Planar<GrayF32> input = ConvertBitmap.bitmapToPlanar(bitmap, null, GrayF32.class, null);
