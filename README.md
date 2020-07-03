@@ -137,38 +137,12 @@ A biblioteca usada em ImageCV para processamento de cores e formas é BoofCV. A 
 
 (**nota**: os sensores das câmeras, em situações com muita luz, tendem a levar as cores para o branco. Diz-se que o sensor saturou, ou que as cores estão "estouradas". A codificação HSL parece lidar melhor com essa situação que a codificação HSV.)
 
-![](screenshots/image104.png)
-
-![](screenshots/image105.png)
-
-![](screenshots/image106.png)
-
-![](screenshots/image107.png)
-
-![](screenshots/image108.png)
-
-![](screenshots/image109.png)
-
-![](screenshots/image110.png)
-
-![](screenshots/image111.png)
-
-![](screenshots/image112.png)
-
-![](screenshots/image113.png)
-
-![](screenshots/image114.png)
-
-![](screenshots/image115.png)
-
-![](screenshots/image116.png)
-
-![](screenshots/image117.png)
-
-![](screenshots/image118.png)
 
 
 ### stepHSV
+
+
+![stepHSV](screenshots/image107.png)
 
 picturePath: localização do arquivo de imagem.
 HSMin: valores mínimos de H e S.
@@ -179,6 +153,10 @@ Retorna em altImagePath a localização do arquivo de imagem segmentado por cor.
 baseado em (https://boofcv.org/index.php?title=Example_Color_Segmentation)
 
 ### reconhecePoligonos
+
+![reconhecePoligonos](screenshots/image106.png)
+
+
 
 picturePath: localização do arquivo de imagem.
 minLados: quantidade mínima de lados dos polígonos a identificar (mínimo=3, máximo=20)
@@ -194,6 +172,9 @@ Retorna em listaDePoligonos uma lista contendo nPoligonos sub-listas. Cada sub-l
 
 ### reconheceElipses
 
+![reconheceElipses](screenshots/image105.png)
+
+
 picturePath: localização do arquivo de imagem.
 
 O desempenho ótimo é conseguido quando os polígonos são pretos e planos em fundo branco, com iluminação uniforme, sem sombras.
@@ -206,37 +187,63 @@ Retorna em listaDeElipses uma lista contendo nElipses sub-listas. Uma sub-lista 
 
 ### converteRGBtoHSV
 
+![converteRGBtoHSV](screenshots/image104.png)
+
+
 RGB
 
 ### getAltImagePath
 
+![getAltImagePath](screenshots/image108.png)
+
+
 Contém a localização do arquivo de imagem que contém as cores segmentadas ou as elipses ou os polígonos localizados, dependendo do método que foi utilizado.
+
+![ImageCV1](screenshots/image118.png)
+
 
 ### getCaractElipses
 
+![getListaDeElipses](screenshots/image110.png)
+
+
 ### getCaractPoligonos
 
+![getListaDePoligonos](screenshots/image111.png)
+
+
 ### getHfromRGBtoHSV
+
+![getHfromRGBtoHSV](screenshots/image109.png)
+
 ### getSfromRGBtoHSV
+![getSfromRGBtoHSV](screenshots/image112.png)
+
+
 ### getVfromRGBtoHSV
+![getVfromRGBtoHSV](screenshots/image113.png)
+
 
 ### getListaDeElipses
 
 ### getnElipses
+
+![getnElipses](screenshots/image114.png)
+
 ### getnPoligonos
+
+![getnPoligonos](screenshots/image115.png)
+
 
 
 ### setCaractElipses
 ### setCaractPoligonos
 ### setnElipses
+![setnElipses](screenshots/image116.png)
+
 ### setnPoligonos
 
-
-
-
-Imagem para recortar os blocos e ilustrar.
-
-![](screenshots/3.jpg)
+![setnPoligonos](screenshots/image117.png)
 
 
 ```
