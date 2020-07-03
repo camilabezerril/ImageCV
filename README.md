@@ -137,6 +137,37 @@ A biblioteca usada em ImageCV para processamento de cores e formas é BoofCV. A 
 
 (**nota**: os sensores das câmeras, em situações com muita luz, tendem a levar as cores para o branco. Diz-se que o sensor saturou, ou que as cores estão "estouradas". A codificação HSL parece lidar melhor com essa situação que a codificação HSV.)
 
+![](screenshots/image104.png)
+
+![](screenshots/image105.png)
+
+![](screenshots/image106.png)
+
+![](screenshots/image107.png)
+
+![](screenshots/image108.png)
+
+![](screenshots/image109.png)
+
+![](screenshots/image110.png)
+
+![](screenshots/image111.png)
+
+![](screenshots/image112.png)
+
+![](screenshots/image113.png)
+
+![](screenshots/image114.png)
+
+![](screenshots/image115.png)
+
+![](screenshots/image116.png)
+
+![](screenshots/image117.png)
+
+![](screenshots/image118.png)
+
+
 ### stepHSV
 
 picturePath: localização do arquivo de imagem.
