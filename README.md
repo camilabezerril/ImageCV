@@ -92,7 +92,7 @@ Na tela do celular:
 
 Abra o app `Ola` no celular e escolha uma foto, ajuste os intervalos de H e S que deseja substituir por preto (Hmin, Hmax, Smin, Smax), clique no botão `Seleciona Cor`.
 
-![Tela do app](amostras/Ola/Screenshot_20200714-172249.png)
+![Tela do app](amostras/Ola/Screenshot_20200714-172110.png)
 
 Na tela do celular: 
 
