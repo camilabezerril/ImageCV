@@ -15,11 +15,9 @@ Navegue para [Como github foi usado neste projeto](Documentos/sobreGit/README.md
 
 ## Apresentação (contexto)
 
-[App Inventor](https://appinventor.mit.edu/) é uma ferramenta de programação baseada em blocos ([*block-based programming*](https://en.wikipedia.org/wiki/Visual_programming_language)) para criar *apps* para [Android](https://www.android.com/intl/pt-BR_br/). Numa generalização grosseira, esses *apps* podem ser executados em telefones celulares, tablets e outros dispositivos que usam Android como sistema operacional.
+[App Inventor](https://appinventor.mit.edu/) é uma ferramenta de programação baseada em blocos ([*block-based programming*](https://en.wikipedia.org/wiki/Visual_programming_language)) para criar *apps* para [Android](https://www.android.com/intl/pt-BR_br/). Numa generalização grosseira, esses *apps* podem ser executados em telefones celulares, tablets e outros dispositivos que usam Android como sistema operacional. Ferramentas como esta tornaram-se conhecidas por seu sucesso no uso em ensino de programação para crianças. O que também criou o estigma de *ser coisa para criança*.
 
-Ferramentas como esta tornaram-se conhecidas por seu sucesso no uso em ensino de programação para crianças. O que também criou o estigma de *ser coisa para criança*.
-
-A técnica de programação baseada em blocos favorece a criação modular de componentes, acelera o desenvolvimento de *apps*, seja na fase de protótipo, seja na fase de produto, permite que profissionais com formação diversas das formações relacionadas à computação possam testar idéias facilmente e, mesmo para programadores, permite que se ocupem menos com detalhes da linguagem.
+A técnica de programação baseada em blocos favorece a criação modular de componentes, acelera o desenvolvimento de *apps*, seja na fase de protótipo, seja na fase de produto, permite que profissionais com formação diversas das formações relacionadas à computação possam testar idéias facilmente e, mesmo para programadores, permite que se ocupem menos com detalhes da linguagem, como notado por Pokress e Veiga, 2013 e por Elts et. al. 2013.
 
 A [versão web do App Inventor](ai2.appinventor.mit.edu/) não requer instalação de programa no computador local. O acesso é gratuito mediante cadastro.
 
@@ -44,43 +42,34 @@ Uma **extensão** do App Inventor é um componente criado por um desenvolvedor i
 
 ### Imagens que exemplificam usos simples
 
-Há muitas formas de usar e combinar as funcionalisdades do ImageCV. Documentar e exemplificar exaustivamente geraria muita documentação de pouca utilidade.
-
-Supondo que o seu processo de avaliação da utilidade de ImageCV seja:
+Há muitas formas de usar e combinar as funcionalidades do ImageCV. Documentar e exemplificar exaustivamente geraria muita documentação de pouca utilidade. Sugere-se que processo de avaliação da utilidade de ImageCV seja:
 
 1. Ver o que ImageCV faz: o que usa como entrada e o que apresenta como saída;
 2. Verificar se há exemplos que se aproximam do uso que deseja;
-2. Experimentar quanto tempo e conhecimento são necessários para começar a usá-lo;
+2. Instalar o(s) exemplo(s);
+2. Experimentar quanto tempo e conhecimento são necessários para começar a usá-lo(s);
 3. Aprofundar-se nos usos e na documentação para chegar ao uso desejado;
 
 Apresentamos abaixo as imagens usadas nos testes que fizemos e os resultados.
 
+#### Detecção de elipses
+
+![Tela do app](amostras/Elipses/Screensont_20200714-154335.png)
+
+[Imagem Original (Tamanho: 2,8M)](amostras/Elipses/IMG_20200615_165551868.jpg)
+
+[Imagem Processada (Tamanho: 600k)](amostras/Elipses/AltImage_8610.jpg)
+
+#### Detecção de polígonos
+
+#### Identificação/Substituição de cor
+
+#### Substituição de cor encadeada a detecção de elipses.
+
+
+
 Nas seções seguintes apresentamos como instalar a extensão no App Inventor, como construir, rapidamente, um app usando algumas funcionalidades de ImageCV, a documentação de referência do ImageCV. Lembre-se que há [apps para teste do ImageCV](testes/README.md).
 
-
-
-(**nota**: [um pesquisador da UNICAMP propõe criar uma versão do App Inventor traduzida para português](https://appinventor.mit.edu/explore/blogs/josh/2016/01/mit-0)
-
-(**nota**: a interface web tem suporte para Português do Brasil)
-
-(**A falta de um tutorial em português pode ser barreira para seu uso com crianças brasileiras.**)
-
-(https://cacm.acm.org/magazines/2019/8/238340-block-based-programming-in-computer-science-education/fulltext
-https://en.scratch-wiki.info/wiki/Block-Based_Coding
-
-)
-
-(**nota**: para cortar as imagens e diminuir seu tamanho usei imageMagic, segundo https://itectec.com/ubuntu/ubuntu-cropping-images-using-command-line-tools-only/
-
-```
-fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/screenshots-primeiroApp$ identify Captura\ de\ tela\ de\ 2020-06-14\ 08-47-54.png 
-Captura de tela de 2020-06-14 08-47-54.png PNG 1080x1920 1080x1920+0+0 8-bit sRGB 1.974MB 0.000u 0:00.000
-```
-```
-fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/screenshots-primeiroApp$ convert Captura\ de\ tela\ de\ 2020-06-14\ 10-45-03.png -quality 50 -crop 1080x1000+50+0 17.jpg
-```
-
-)
 
 ## Como instalar a extensão
 
@@ -245,6 +234,11 @@ Contém a localização do arquivo de imagem que contém as cores segmentadas ou
 
 ![setnPoligonos](screenshots/image117.png)
 
+## Bibliografia
+
+Pokress, S.C., Veiga, J. MIT App Inventor: Enabling Personal Mobile Computing. In Proceedings of the PRoMoTo Workshop at the ACM SIGPLAN conference on Systems, Programming, Languages and Applications (SPLASH ’13). ACM, New York, NY, USA. (http://arxiv.org/abs/1310.2830). 
+
+Elsts, Atis & Judvaitis, Jānis & Selavo, Leo. (2013). SEAL: A Domain-Specific Language for Novice Wireless Sensor Network Programmers. Proceedings - 39th Euromicro Conference Series on Software Engineering and Advanced Applications, SEAA 2013. 220-227. 10.1109/SEAA.2013.16. 
 
 ```
 @DesignerComponent(version = 1,
@@ -266,4 +260,28 @@ Contém a localização do arquivo de imagem que contém as cores segmentadas ou
     public void reconhecePoligonos(String picturePath, int minLados, int maxLados) {
 ```
 
+
+
+(**nota**: [um pesquisador da UNICAMP propõe criar uma versão do App Inventor traduzida para português](https://appinventor.mit.edu/explore/blogs/josh/2016/01/mit-0)
+
+(**nota**: a interface web tem suporte para Português do Brasil)
+
+(**A falta de um tutorial em português pode ser barreira para seu uso com crianças brasileiras.**)
+
+(https://cacm.acm.org/magazines/2019/8/238340-block-based-programming-in-computer-science-education/fulltext
+https://en.scratch-wiki.info/wiki/Block-Based_Coding
+
+)
+
+(**nota**: para cortar as imagens e diminuir seu tamanho usei imageMagic, segundo https://itectec.com/ubuntu/ubuntu-cropping-images-using-command-line-tools-only/
+
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/screenshots-primeiroApp$ identify Captura\ de\ tela\ de\ 2020-06-14\ 08-47-54.png 
+Captura de tela de 2020-06-14 08-47-54.png PNG 1080x1920 1080x1920+0+0 8-bit sRGB 1.974MB 0.000u 0:00.000
+```
+```
+fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/screenshots-primeiroApp$ convert Captura\ de\ tela\ de\ 2020-06-14\ 10-45-03.png -quality 50 -crop 1080x1000+50+0 17.jpg
+```
+
+)
 
