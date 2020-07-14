@@ -84,6 +84,25 @@ Trata-se do desenvolvimento de componentes de software utilizando metodologia á
 
 A versão do BoofCV utilizada em ImageCV é 0.27, por questão de compatibilidade entre ambientes de desenvolvimento. A versão atual de BoofCV é 0.36. A documentação da versão 0.27 não foi encontrada, o que dificultou o uso das funções de reconhecimento de polígonos.
 
+A quantidade de aplicativos de teste criados só foi possível pela adoção da programação baseada em blocos, que permitiu que esses aplicativos fossem construídos em até menos de uma hora.
+
+O bloco que converte códigos RGB para HSV é particularmente conveniente para encontrar a faixa de H e S que se deseja detectar
+
+Os testes produzidos permitem levantar algumas características dos algoritmos. Estas podem gerar hipóteses para teste e aperfeiçoamento que podem motivar desenvolvimentos futuros.
+
+1. Transformações de escala e resolução, caso sejam feitas e não revertidas, podem acarretar erros nas coordenadas das elipses e dos vértices dos polígonos. Algumas imagens de teste, após processamento, ficam muito pixeladas, o que indica o uso dessas transformações;
+2. Cada tratamento da imagem parece degradar um pouco a imagem;
+3. O algoritmo de reconhecimento de elipses parece aceitar erros maiores para reconhecer elipses menores, comparado a elipses maiores.
+
+Seriam sugestões para projetos futuros:
+
+1. Checar a preservação do sistema de coordenadas ao longo de sucessivos tratamentos;
+2. Checar possibilidade e conveniência de diminuir a degradação da imagem para permitir mais tratamentos em sequência;
+3. Checar o funcionamento interno dos algoritmos de localização de formas para verificar se há alguma transformação que afete desnecessariamente a resolução da imagem;
+4. Testar uma estratégia de, baseado na imagem antes do tratamento, recuperar a qualidade da imagem depois do tratamento.
+
+A  disponibilização de um processo para criar extensões para App Inventor permite embarcar no celular uma grande variedade de aplicativos, em especial os contidos em bibliotecas Java (.jar), que, além de BoofCV, é também o caso de Weka. Consequentemente facilitando a criação e teste de aplicativos que fazem uso de Inteligência Artificial.
+
 ## Referências
 
 BRADSKI, G. (2000) - The OpenCV Library. ​ Dr. Dobb’s Journal of Software Tools ​ .
@@ -92,8 +111,4 @@ maio de 2019.
 POKRESS, Shaileen Crawford; VEIGA, José Juan Dominguez (2013) - MIT App
 Inventor: Enabling Personal Mobile Computing - PRoMoTo 2013 Proceedings
 (arXiv:1309.5509) October 2013.
-
-
-## Lista de divulgação dos resultados, quando for o caso.
-
 

@@ -40,7 +40,7 @@ Uma **extensão** do App Inventor é um componente criado por um desenvolvedor i
 3. Localizar polígonos, definindo a quantidade de vértices desejada;
 4. Combinar a marcação de cores com a localização de formas.
 
-### Imagens que exemplificam usos simples
+### Imagens que exemplificam usos da extensão
 
 Há muitas formas de usar e combinar as funcionalidades do ImageCV. Documentar e exemplificar exaustivamente geraria muita documentação de pouca utilidade. Sugere-se que processo de avaliação da utilidade de ImageCV seja:
 
@@ -56,10 +56,15 @@ Apresentamos abaixo as imagens usadas nos testes que fizemos e os resultados.
 
 Abra o app `Elipses` no celular e escolha uma foto. 
 
-![Tela do app](amostras/Elipses/Screenshot_20200714-154335.png)
+![Tela do app](amostras/Elipses/Screenshot_20200714-154353.png)
 
-Na tela do celular: No alto a visualização da foto escolhida, em seguida a foto processada com as sete elipses localizadas realçadas, em seguida a lista com tamanho e posição de cada elipse.
+Na tela do celular: 
 
+- No alto a visualização da foto escolhida, 
+- em seguida a foto processada com as sete elipses localizadas realçadas, 
+- a quantidade de elipses localizadas;
+- lista contendo uma sub-lista por elipse. Cada sub-lista contém as coordenadas de uma elipse, a expressão "Não especificado" (para uso futuro) e o tamanho da elipse;
+- por último, o caminho para o arquivo processado.
 
 [Imagem Original (Tamanho: 2,8M)](amostras/Elipses/IMG_20200615_165551868.jpg)
 
@@ -67,14 +72,91 @@ Na tela do celular: No alto a visualização da foto escolhida, em seguida a fot
 
 #### Detecção de polígonos
 
+O app foi codificado para identificar polígonos de quatro lados, por abuso de notação, usou-se retângulos para o nome do app. Abra o app `Retangulos` no celular e escolha uma foto.
+
+![Tela do app](amostras/Retangulos/Screenshot_20200714-161840.png)
+
+Na tela do celular: 
+
+- No alto a visualização da foto escolhida, 
+- em seguida a foto processada com os cinco retângulos localizados realçados (clicando na foto ela é aberta em tela cheia), 
+- a quantidade de retângulos localizados;
+- lista contendo uma sub-lista por retângulo. Cada sub-lista descreve um retângulo, iniciando pela expressão "Não especificado" (para uso futuro) e as coordenadas de cada um dos vértices;
+- por último, o caminho para o arquivo processado.
+
+[Imagem Original (Tamanho: 3M)](amostras/Retangulos/IMG_20200615_152429437.jpg)
+
+[Imagem Processada (Tamanho: 700k)](amostras/Retangulos/AltImage_1274.jpg)
+
 #### Identificação/Substituição de cor
 
-#### Substituição de cor encadeada a detecção de elipses.
+Abra o app `Ola` no celular e escolha uma foto, ajuste os intervalos de H e S que deseja substituir por preto (Hmin, Hmax, Smin, Smax), clique no botão `Seleciona Cor`.
 
+![Tela do app](amostras/Ola/Screenshot_20200714-172249.png)
 
+Na tela do celular: 
 
-Nas seções seguintes apresentamos como instalar a extensão no App Inventor, como construir, rapidamente, um app usando algumas funcionalidades de ImageCV, a documentação de referência do ImageCV. Lembre-se que há [apps para teste do ImageCV](testes/README.md).
+- No alto a visualização da foto escolhida, 
+- em seguida os quatro controles deslizantes através dos quais ajusta-se Hmin, Hmax, Smin e Smax.
+- o botão `Seleciona Cor` - apertar depois de escolher os intervalos de H e S desejados,
+- a foto processada, com as cores substituídas (clicando na foto ela é aberta em tela cheia), 
+- por último, o caminho para o arquivo processado.
 
+[Imagem Original (Tamanho: 2,7M)](amostras/Ola/IMG_20200615_132103299.jpg)
+
+[Imagem Processada (Tamanho: 90k)](amostras/Ola/AltImage_5703.jpg)
+
+No exemplo acima, com 0.6283 < H < 1.06811 e 0.2 < S < 1, selecionou-se muitas áreas com sombras. Para remover um pouco as sombras, pode-se aumentar um pouco a Saturação, o que pode ser interpretado como excluir áreas com pouca cor.
+
+Resultado ajustando para  0.6283 < H < 1.06811 e **0.41** < S < 1
+
+![Tela do app](amostras/Ola/Screenshot_20200714-172249.png)
+
+Imagem Original (Tamanho: 2,7M) é a mesma do exemplo acima.
+
+[Imagem Processada (Tamanho: 60k)](amostras/Elipses/Ola/AltImage_4416.jpg)
+
+Você pode estar se questionando [por que HSV ao invés de RGB](#Por-que-HSV-ao-invés-de-RGB). HSV é um sistema de codificação de cores que, comparado ao RGB, organiza o espaço de cores de uma forma mais intuitiva para nós, humanos.
+
+#### Substituição de cor encadeada a detecção de elipses e retângulos.
+
+Nestes exemplos a imagem é processada realçando uma cor específica e depois, sobre a imagem processada, as formas são localizadas.
+
+**Realça o laranja e localiza a forma**
+
+[Imagem Original (Tamanho: 2,7M)](amostras/Combinado/IMG_20200615_192802274.jpg)
+
+![Tela do app](amostras/Combinado/Screenshot_20200714-185223.png)
+
+[Imagem com o laranja realçado (12k)](amostras/Combinado/AltImage_4745.jpg)
+
+![Tela do app](amostras/Combinado/Screenshot_20200714-185257.png)
+
+[Imagem com o retângulo localizado (9k)](amostras/Combinado/AltImage_1394.jpg)
+
+**Realça o azul e localiza as formas**
+
+Imagem Original (Tamanho: 2,7M) é a mesma do exemplo acima.
+
+![Tela do app](amostras/Combinado/Screenshot_20200714-191652.png)
+
+[Imagem com o azul realçado (12k)](amostras/Combinado/AltImage_4339.jpg)
+
+![Tela do app](amostras/Combinado/Screenshot_20200714-191821.png)
+
+[Imagem com as formas localizadas (10k)](amostras/Combinado/AltImage_7224.jpg)
+
+**Realça o vermelho e localiza as formas**
+
+Imagem Original (Tamanho: 2,7M) é a mesma do exemplo acima.
+
+![Tela do app](amostras/Combinado/Screenshot_20200714-192558.png)
+
+[Imagem com o azul realçado (12k)](amostras/Combinado/AltImage_7538.jpg)
+
+![Tela do app](amostras/Combinado/Screenshot_20200714-192640.png)
+
+[Imagem com as formas localizadas (10k)](amostras/Combinado/AltImage_9925.jpg)
 
 ## Como instalar a extensão
 
@@ -91,11 +173,9 @@ Deve aparecer na aba a extensão ImageCV.
 ![](screenshots/2.jpg)
 
 
+## Os aplicativos para teste
 
-## Como usar a extensão em um app simples
-
-
-
+[Página para download de .aia e .apk](Testes/README.md)
 
 ## Referência dos blocos de ImageCV
 
@@ -244,6 +324,8 @@ Contém a localização do arquivo de imagem que contém as cores segmentadas ou
 Pokress, S.C., Veiga, J. MIT App Inventor: Enabling Personal Mobile Computing. In Proceedings of the PRoMoTo Workshop at the ACM SIGPLAN conference on Systems, Programming, Languages and Applications (SPLASH ’13). ACM, New York, NY, USA. (http://arxiv.org/abs/1310.2830). 
 
 Elsts, Atis & Judvaitis, Jānis & Selavo, Leo. (2013). SEAL: A Domain-Specific Language for Novice Wireless Sensor Network Programmers. Proceedings - 39th Euromicro Conference Series on Software Engineering and Advanced Applications, SEAA 2013. 220-227. 10.1109/SEAA.2013.16. 
+
+[Mapa do site](sitemap.md)
 
 ```
 @DesignerComponent(version = 1,
