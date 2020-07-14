@@ -54,7 +54,12 @@ Apresentamos abaixo as imagens usadas nos testes que fizemos e os resultados.
 
 #### Detecção de elipses
 
-![Tela do app](amostras/Elipses/Screensont_20200714-154335.png)
+Abra o app `Elipses` no celular e escolha uma foto. 
+
+![Tela do app](amostras/Elipses/Screenshot_20200714-154335.png)
+
+Na tela do celular: No alto a visualização da foto escolhida, em seguida a foto processada com as sete elipses localizadas realçadas, em seguida a lista com tamanho e posição de cada elipse.
+
 
 [Imagem Original (Tamanho: 2,8M)](amostras/Elipses/IMG_20200615_165551868.jpg)
 
