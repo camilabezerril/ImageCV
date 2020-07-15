@@ -119,37 +119,37 @@ Abra o leitor de QR-Code, leia o código e clique no link. Um programa pode tran
 
 Como é o programa que você fez, usando sites e instruções confiáveis, deve ser seguro baixá-lo. Se você concorda, responda OK.
 
-<img src="screenshots/Screenshot_20200614-104534.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104534.png" height="348" width="162"> 
 
 (**nota:** imagens são tratadas como caracteres.)
 
 Depois abra o programa (clique em abrir). Se a notificação sair da tela, entre no navegador em downloads, encontre Ola.apk e dê um duplo-clique sobre ele (isto equivale a clicar em abrir).
 
-<img src="screenshots/Screenshot_20200614-104551.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104551.png" height="348" width="162"> 
 
 Em seu celular, na tela a seguir, clique em Instalar
 
-<img src="screenshots/Screenshot_20200614-104604.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104604.png" height="348" width="162"> 
 
 Aguarde o processo de instalação terminar
 
-<img src="screenshots/Screenshot_20200614-104610.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104610.png" height="348" width="162"> 
 
 Terminada a instalação clique em abrir
 
-<img src="screenshots/Screenshot_20200614-104621.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104621.png" height="348" width="162"> 
 
 Você verá a tela que você criou
 
-<img src="screenshots/Screenshot_20200614-104631.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104631.png" height="348" width="162"> 
 
 Clique na caixa de texto - o teclado aparecerá, digite o texto que quiser e clique no botão, 
 
-<img src="screenshots/Screenshot_20200614-104651.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104651.png" height="348" width="162"> 
 
 o texto que você digitou aparecerá na Legenda1.
 
-<img src="screenshots/Screenshot_20200614-104713.png" height="580" width="270"> 
+<img src="screenshots/Screenshot_20200614-104713.png" height="348" width="162"> 
 
 Parabéns, você completou todos os passos para construir um app Android.
 

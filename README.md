@@ -50,13 +50,14 @@ Há muitas formas de usar e combinar as funcionalidades do ImageCV. Documentar e
 2. Experimentar quanto tempo e conhecimento são necessários para começar a usá-lo(s);
 3. Aprofundar-se nos usos e na documentação para chegar ao uso desejado;
 
-Apresentamos abaixo as imagens usadas nos testes que fizemos e os resultados.
+São apresentadas abaixo as imagens usadas nos testes e os links para os apps.
 
 #### Detecção de elipses
 
 Abra o app `Elipses` no celular e escolha uma foto. 
 
-![Tela do app](amostras/Elipses/Screenshot_20200714-154353.png)
+<!--- ![Tela do app](amostras/Elipses/Screenshot_20200714-154353.png) --->
+<img src="amostras/Elipses/Screenshot_20200714-154353.png" height="580" width="270"> 
 
 Na tela do celular: 
 
@@ -70,11 +71,16 @@ Na tela do celular:
 
 [Imagem Processada (Tamanho: 600k)](amostras/Elipses/AltImage_8610.jpg)
 
+[Aplicativo para localizar elipses](Elipses.apk)
+
+[Código-fonte do Aplicativo para localizar elipses](Elipses.aia)
+
 #### Detecção de polígonos
 
 O app foi codificado para identificar polígonos de quatro lados, por abuso de notação, usou-se retângulos para o nome do app. Abra o app `Retangulos` no celular e escolha uma foto.
 
-![Tela do app](amostras/Retangulos/Screenshot_20200714-161840.png)
+<!--- ![Tela do app](amostras/Retangulos/Screenshot_20200714-161840.png) --->
+<img src="amostras/Retangulos/Screenshot_20200714-161840.png" height="580" width="270"> 
 
 Na tela do celular: 
 
@@ -88,11 +94,15 @@ Na tela do celular:
 
 [Imagem Processada (Tamanho: 700k)](amostras/Retangulos/AltImage_1274.jpg)
 
+[Aplicativo para localizar quadriláteros](Retangulos.apk)
+[Código-fonte do Aplicativo para localizar quadriláteros](Retangulos.aia)
+
 #### Identificação/Substituição de cor
 
 Abra o app `Ola` no celular e escolha uma foto, ajuste os intervalos de H e S que deseja substituir por preto (Hmin, Hmax, Smin, Smax), clique no botão `Seleciona Cor`.
 
-![Tela do app](amostras/Ola/Screenshot_20200714-172110.png)
+<!--- ![Tela do app](amostras/Ola/Screenshot_20200714-172110.png) --->
+<img src="amostras/Ola/Screenshot_20200714-172110.png" height="580" width="270"> 
 
 Na tela do celular: 
 
@@ -110,13 +120,58 @@ No exemplo acima, com 0.6283 < H < 1.06811 e 0.2 < S < 1, selecionou-se muitas �
 
 Resultado ajustando para  0.6283 < H < 1.06811 e **0.41** < S < 1
 
-![Tela do app](amostras/Ola/Screenshot_20200714-172249.png)
+<!--- ![Tela do app](amostras/Ola/Screenshot_20200714-172249.png) --->
+<img src="amostras/Ola/Screenshot_20200714-172249.png" height="580" width="270"> 
 
 Imagem Original (Tamanho: 2,7M) é a mesma do exemplo acima.
 
 [Imagem Processada (Tamanho: 60k)](amostras/Elipses/Ola/AltImage_4416.jpg)
 
+[Apĺicativo para binarizar cores a partir de foto de arquivo](Ola.apk)
+
+[Código-fonte do Apĺicativo para binarizar cores a partir de foto de arquivo](Ola.aia)
+
 Você pode estar se questionando [por que HSV ao invés de RGB](#Por-que-HSV-ao-invés-de-RGB). HSV é um sistema de codificação de cores que, comparado ao RGB, organiza o espaço de cores de uma forma mais intuitiva para nós, humanos.
+
+#### Conversor de código RGB para HSV
+
+Para explorar a conversão de RGB para HSV usada no ImageCV (fornecida no BoofCV), construi-se o app Conversor.
+
+[Aplicativo para converter código RGB em código HSV](Conversor.apk)
+
+[Código-fonte do Aplicativo para converter código RGB em código HSV](Conversor.aia)
+
+É pertinente um aviso pois pode haver variação da cor em função da tela do aparelho - aparelhos diferentes podem apresentar cores ligeiramente diferentes. Também a visão de cada indivíduo é ligeiramente diferente - pessoas diferentes podem discordar sobre a cor de um mesmo objeto.
+
+Sobre os sistemas
+
+- RGB decompõe uma determinada cor em vermelho (R), verde (G) e azul (B) com intensidades inteiras variando de 0 a 255. Cada determinada cor é definida pela combinação das intensidades nos componentes.
+- HSV decompõe uma determinada cor em matiz (Hue ou H), saturação (Saturation ou S) e valor (Value ou V). Matiz é codificado de 0 a 2*PI e representa uma variação contínua de cor:
+Matiz próximo de zero corresponde a vermelho, Matiz próximo de 1 a amarelo, Matiz próximo de 4 a verde, próximo de 5 a azul, próximo de 6.28 a vermelho (novamente). Saturação é uma medida contínua de 0 a 1 que representa quantidade de cor. Valores próximos de 0 são menos intensos (ou menos definidos), valores próximos de 1 são mais intensos (ou mais definidos). Valor é uma medida de luminosidade - valores próximos a zero são menos luminosos (ou mais sombreados) e valores próximos a 255 são mais luminosos (ou menos sombreados, ou mais iluminados).
+
+<!--- ![Tela do app](amostras/Conversor/1.png) --->
+<img src="amostras/Conversor/1.png" height="175" width="270"> 
+
+Na tela do celular: 
+
+- No alto três controles deslizantes, cada um correspondendo a vermelho (R), verde (G) e azul (B), que podem ser variados de 0 a 255;
+- em seguida os valores RGB selecionados nos controles deslizantes;
+- em seguita os valores HSV correspondentes aos valores RGB selecionados; 
+- por último, uma amostra da cor (apresentada como cor de fundo do botão);
+
+Quando o app é aberto os controles deslizantes são posicionados no meio. A cor resultante é um tom de cinza. Este ajuste causa uma divisão por zero na conta para H, por isso é mostrado NaN.
+
+Por exemplo, deslizando R e G para o máximo e B para o mínimo, obtém-se um amarelo "puro" e intenso:
+
+<!--- ![Tela do app](amostras/Conversor/2.png) --->
+<img src="amostras/Conversor/2.png" height="175" width="270"> 
+
+O amarelo tem H em torno de 1 e este, em particular, tem alta saturação (ou é intenso).
+
+A tela abaixo também apresenta um amarelo.
+
+<!--- ![Tela do app](amostras/Conversor/2a.png) --->
+<img src="amostras/Conversor/2a.png" height="175" width="270"> 
 
 #### Substituição de cor encadeada a detecção de elipses e retângulos.
 
@@ -126,11 +181,13 @@ Nestes exemplos a imagem é processada realçando uma cor específica e depois, 
 
 [Imagem Original (Tamanho: 2,7M)](amostras/Combinado/IMG_20200615_192802274.jpg)
 
-![Tela do app](amostras/Combinado/Screenshot_20200714-185223.png)
+<!--- ![Tela do app](amostras/Combinado/Screenshot_20200714-185223.png) --->
+<img src="amostras/Combinado/Screenshot_20200714-185223.png" height="580" width="270"> 
 
 [Imagem com o laranja realçado (12k)](amostras/Combinado/AltImage_4745.jpg)
 
-![Tela do app](amostras/Combinado/Screenshot_20200714-185257.png)
+<!--- ![Tela do app](amostras/Combinado/Screenshot_20200714-185257.png) --->
+<img src="amostras/Combinado/Screenshot_20200714-185257.png" height="580" width="270"> 
 
 [Imagem com o retângulo localizado (9k)](amostras/Combinado/AltImage_1394.jpg)
 
@@ -138,11 +195,13 @@ Nestes exemplos a imagem é processada realçando uma cor específica e depois, 
 
 Imagem Original (Tamanho: 2,7M) é a mesma do exemplo acima.
 
-![Tela do app](amostras/Combinado/Screenshot_20200714-191652.png)
+<!--- ![Tela do app](amostras/Combinado/Screenshot_20200714-191652.png) --->
+<img src="amostras/Combinado/Screenshot_20200714-191652.png" height="580" width="270"> 
 
 [Imagem com o azul realçado (12k)](amostras/Combinado/AltImage_4339.jpg)
 
-![Tela do app](amostras/Combinado/Screenshot_20200714-191821.png)
+<!--- ![Tela do app](amostras/Combinado/Screenshot_20200714-191821.png) --->
+<img src="amostras/Combinado/Screenshot_20200714-191821.png" height="580" width="270"> 
 
 [Imagem com as formas localizadas (10k)](amostras/Combinado/AltImage_7224.jpg)
 
@@ -150,11 +209,13 @@ Imagem Original (Tamanho: 2,7M) é a mesma do exemplo acima.
 
 Imagem Original (Tamanho: 2,7M) é a mesma do exemplo acima.
 
-![Tela do app](amostras/Combinado/Screenshot_20200714-192558.png)
+<!--- ![Tela do app](amostras/Combinado/Screenshot_20200714-192558.png) --->
+<img src="amostras/Combinado/Screenshot_20200714-192558.png" height="580" width="270"> 
 
 [Imagem com o azul realçado (12k)](amostras/Combinado/AltImage_7538.jpg)
 
-![Tela do app](amostras/Combinado/Screenshot_20200714-192640.png)
+<!--- ![Tela do app](amostras/Combinado/Screenshot_20200714-192640.png) --->
+<img src="amostras/Combinado/Screenshot_20200714-192640.png" height="580" width="270"> 
 
 [Imagem com as formas localizadas (10k)](amostras/Combinado/AltImage_9925.jpg)
 
@@ -171,7 +232,6 @@ Uma caixa de mensagem se apresenta, clique em Browse, selecione o arquivo *appcv
 Deve aparecer na aba a extensão ImageCV.
 
 ![](screenshots/2.jpg)
-
 
 ## Os aplicativos para teste
 
@@ -211,113 +271,144 @@ A biblioteca usada em ImageCV para processamento de cores e formas é BoofCV. A 
 
 (**nota**: os sensores das câmeras, em situações com muita luz, tendem a levar as cores para o branco. Diz-se que o sensor saturou, ou que as cores estão "estouradas". A codificação HSL parece lidar melhor com essa situação que a codificação HSV.)
 
-
-
 ### stepHSV
 
+<!--- ![stepHSV](screenshots/image107.png) --->
+<img src="screenshots/image107.png" alt="stepHSV" height="55" width="313"> 
 
-![stepHSV](screenshots/image107.png)
+picturePath: é um texto e representa a localização do arquivo de imagem sobre a qual aplicar o procedimento.
+HSMin: é um texto contendo dois números separados por uma vírgula. Representam os valores mínimos de H e S.
+HSMax:  é um texto contendo dois números separados por uma vírgula. Representam os valores máximos de H e S.
 
-picturePath: localização do arquivo de imagem.
-HSMin: valores mínimos de H e S.
-HSMax: valores máximos de H e S.
-
-Retorna em altImagePath a localização do arquivo de imagem segmentado por cor.
+Retorna em altImagePath o texto indicando a localização do arquivo de imagem segmentado por cor.
 
 baseado em (https://boofcv.org/index.php?title=Example_Color_Segmentation)
 
+[Seção com o teste do bloco](Identificação/Substituição-de-cor)
+
 ### reconhecePoligonos
 
-![reconhecePoligonos](screenshots/image106.png)
+<!--- ![reconhecePoligonos](screenshots/image106.png) --->
+<img src="screenshots/image106.png" alt="reconhecePoligonos" height="55" width="313"> 
 
-
-
-picturePath: localização do arquivo de imagem.
-minLados: quantidade mínima de lados dos polígonos a identificar (mínimo=3, máximo=20)
-maxLados: quantidade máxima de lados dos polígonos a identificar (mínimo=3, máximo=20)
+picturePath: é um texto e representa a localização do arquivo de imagem sobre a qual aplicar o procedimento.
+minLados: é um número que representa a quantidade mínima de lados dos polígonos a identificar (mínimo=3, máximo=20)
+maxLados: é um número que representa a quantidade máxima de lados dos polígonos a identificar (mínimo=3, máximo=20)
 
 O desempenho ótimo é conseguido quando os polígonos são pretos e planos em fundo branco, com iluminação uniforme, sem sombras.
 
-Retorna em altImagePath a localização do arquivo de imagem com os polígonos identificados contornados em vermelho.
+Retorna em altImagePath o texto indicando a localização do arquivo de imagem com os polígonos identificados contornados em vermelho.
 
 Retorna em nPoligonos a quantidade de polígonos encontrada.
 
 Retorna em listaDePoligonos uma lista contendo nPoligonos sub-listas. Cada sub-lista contém a coordenadas dos vértices dos polígonos em ordem: [x1, y1, x2, y2, x3, y3, ..., xn, yn].
 
+[Seção com o teste do bloco](#Detecção-de-polígonos)
+
 ### reconheceElipses
 
-![reconheceElipses](screenshots/image105.png)
+<!--- ![reconheceElipses](screenshots/image105.png) --->
+<img src="screenshots/image105.png" alt="reconheceElipses" height="55" width="313"> 
 
-
-picturePath: localização do arquivo de imagem.
+picturePath: é um texto e representa a localização do arquivo de imagem sobre a qual aplicar o procedimento.
 
 O desempenho ótimo é conseguido quando os polígonos são pretos e planos em fundo branco, com iluminação uniforme, sem sombras.
 
-Retorna em altImagePath a localização do arquivo de imagem segmentado por cor.
+Retorna em altImagePath o texto indicando a localização do arquivo da imagem segmentada por cor.
 
 Retorna em nElipses a quantidade de elipses encontrada.
 
 Retorna em listaDeElipses uma lista contendo nElipses sub-listas. Uma sub-lista contém: [xcentro, ycentro, "Não Especificado", diâmetro_médio].
 
+[Seção com o teste do bloco](#Detecção-de-elipses)
+
 ### converteRGBtoHSV
 
-![converteRGBtoHSV](screenshots/image104.png)
+<!--- ![converteRGBtoHSV](screenshots/image104.png) --->
+<img src="screenshots/image104.png" alt="converteRGBtoHSV" height="55" width="313"> 
 
+RGB: é um texto contendo três números separados por vírgulas. Os números representam as intensidades de R, G, B, e vão de 0 a 255.
 
-RGB
+Após a conversão o valores resultantes são obtidos por 
+[getHfromRGBtoHSV](#getHfromRGBtoHSV), 
+[getSfromRGBtoHSV](#getSfromRGBtoHSV), 
+[getVfromRGBtoHSV](#getVfromRGBtoHSV).
+
+[Seção com o teste do bloco](#Conversor-de-código-RGB-para-HSV)
 
 ### getAltImagePath
 
-![getAltImagePath](screenshots/image108.png)
+<!--- ![getAltImagePath](screenshots/image108.png) --->
+<img src="screenshots/image108.png" alt="getAltImagePath" height="55" width="313"> 
 
 
-Contém a localização do arquivo de imagem que contém as cores segmentadas ou as elipses ou os polígonos localizados, dependendo do método que foi utilizado.
+Contém a localização do arquivo de imagem que contém as cores segmentadas ou as elipses ou os polígonos marcados, dependendo do método que foi utilizado.
 
-![ImageCV1](screenshots/image118.png)
-
-
-### getCaractElipses
-
-![getListaDeElipses](screenshots/image110.png)
-
-
-### getCaractPoligonos
-
-![getListaDePoligonos](screenshots/image111.png)
-
-
-### getHfromRGBtoHSV
-
-![getHfromRGBtoHSV](screenshots/image109.png)
-
-### getSfromRGBtoHSV
-![getSfromRGBtoHSV](screenshots/image112.png)
-
-
-### getVfromRGBtoHSV
-![getVfromRGBtoHSV](screenshots/image113.png)
+<!--- ![ImageCV1](screenshots/image118.png) --->
 
 
 ### getListaDeElipses
 
+<!--- ![getListaDeElipses](screenshots/image110.png) --->
+<img src="screenshots/image110.png" alt="getListaDeElipses" height="55" width="313"> 
+
+Retorna uma lista contendo nElipses sub-listas. Cada sub-lista contém as coordenadas do centro, um texto (uso futuro) e o diâmetro médio de cada elipse: [xcentro, ycentro, "Não Especificado", diâmetro_médio].
+
+### getListaDePoligonos
+
+<!--- ![getListaDePoligonos](screenshots/image111.png) --->
+<img src="screenshots/image111.png" alt="getListaDePoligonos" height="55" width="313"> 
+
+Retorna uma lista contendo nPoligonos sub-listas. Cada sub-lista contém as coordenadas dos vértices de um polígono em ordem: [x1, y1, x2, y2, x3, y3, ..., xn, yn].
+
+### getHfromRGBtoHSV
+
+<!--- ![getHfromRGBtoHSV](screenshots/image109.png) --->
+<img src="screenshots/image109.png" alt="getHfromRGBtoHSV" height="55" width="313"> 
+
+Retorna um número de 0 a 2*PI (aprox. 6.28) que representa o matiz (Hue - H).
+
+### getSfromRGBtoHSV
+
+<!--- ![getSfromRGBtoHSV](screenshots/image112.png) --->
+<img src="screenshots/image112.png" alt="getSfromRGBtoHSV" height="55" width="313"> 
+
+Retorna um número de 0 a 1 que representa a saturação (Saturation - S).
+
+### getVfromRGBtoHSV
+
+<!--- ![getVfromRGBtoHSV](screenshots/image113.png) --->
+<img src="screenshots/image113.png" alt="getVfromRGBtoHSV" height="55" width="313"> 
+
+Retorna um número de 0 a 255 que representa o valor (Value - V).
+
 ### getnElipses
 
-![getnElipses](screenshots/image114.png)
+<!--- ![getnElipses](screenshots/image114.png) --->
+<img src="screenshots/image114.png" alt="getnElipses" height="55" width="313"> 
+
+Retorna um número que representa a quantidade de elipses.
 
 ### getnPoligonos
 
-![getnPoligonos](screenshots/image115.png)
+<!--- ![getnPoligonos](screenshots/image115.png) --->
+<img src="screenshots/image115.png" alt="getnPoligonos" height="55" width="313"> 
 
+Retorna um número que representa a quantidade de elipses.
 
-
-### setCaractElipses
-### setCaractPoligonos
 ### setnElipses
-![setnElipses](screenshots/image116.png)
+
+<!--- ![setnElipses](screenshots/image116.png) --->
+<img src="screenshots/image116.png" alt="setnElipses" height="55" width="313"> 
+
+Permite zerar a quantidade de elipses.
 
 ### setnPoligonos
 
-![setnPoligonos](screenshots/image117.png)
+<!--- ![setnPoligonos](screenshots/image117.png) --->
+<img src="screenshots/image117.png" alt="setnPoligonos" height="55" width="313"> 
+
+Permite zerar a quantidade de polígonos.
 
 ## Bibliografia
 
