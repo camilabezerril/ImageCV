@@ -150,7 +150,7 @@ Sobre os sistemas
 Matiz próximo de zero corresponde a vermelho, Matiz próximo de 1 a amarelo, Matiz próximo de 4 a verde, próximo de 5 a azul, próximo de 6.28 a vermelho (novamente). Saturação é uma medida contínua de 0 a 1 que representa quantidade de cor. Valores próximos de 0 são menos intensos (ou menos definidos), valores próximos de 1 são mais intensos (ou mais definidos). Valor é uma medida de luminosidade - valores próximos a zero são menos luminosos (ou mais sombreados) e valores próximos a 255 são mais luminosos (ou menos sombreados, ou mais iluminados).
 
 <!--- ![Tela do app](amostras/Conversor/1.png) --->
-<img src="amostras/Conversor/1.png" height="175" width="270"> 
+<img src="amostras/Conversor/1.svg" height="175" width="270"> 
 
 Na tela do celular: 
 
@@ -163,14 +163,14 @@ Quando o app é aberto os controles deslizantes são posicionados no meio. A cor
 
 Por exemplo, deslizando R e G para o máximo e B para o mínimo, obtém-se um amarelo "puro" e intenso:
 
-<!--- ![Tela do app](amostras/Conversor/2.png) --->
+<!--- ![Tela do app](amostras/Conversor/2.svg) --->
 <img src="amostras/Conversor/2.png" height="175" width="270"> 
 
 O amarelo tem H em torno de 1 e este, em particular, tem alta saturação (ou é intenso).
 
 A tela abaixo também apresenta um amarelo.
 
-<!--- ![Tela do app](amostras/Conversor/2a.png) --->
+<!--- ![Tela do app](amostras/Conversor/2a.svg) --->
 <img src="amostras/Conversor/2a.png" height="175" width="270"> 
 
 #### Substituição de cor encadeada a detecção de elipses e retângulos.
@@ -274,7 +274,7 @@ A biblioteca usada em ImageCV para processamento de cores e formas é BoofCV. A 
 ### stepHSV
 
 <!--- ![stepHSV](screenshots/image107.png) --->
-<img src="screenshots/image107.png" alt="stepHSV" height="55" width="313"> 
+<img src="screenshots/image107.png" alt="stepHSV" height="110" width="313"> 
 
 picturePath: é um texto e representa a localização do arquivo de imagem sobre a qual aplicar o procedimento.
 HSMin: é um texto contendo dois números separados por uma vírgula. Representam os valores mínimos de H e S.
@@ -289,7 +289,7 @@ baseado em (https://boofcv.org/index.php?title=Example_Color_Segmentation)
 ### reconhecePoligonos
 
 <!--- ![reconhecePoligonos](screenshots/image106.png) --->
-<img src="screenshots/image106.png" alt="reconhecePoligonos" height="55" width="313"> 
+<img src="screenshots/image106.png" alt="reconhecePoligonos" height="110" width="313"> 
 
 picturePath: é um texto e representa a localização do arquivo de imagem sobre a qual aplicar o procedimento.
 minLados: é um número que representa a quantidade mínima de lados dos polígonos a identificar (mínimo=3, máximo=20)
