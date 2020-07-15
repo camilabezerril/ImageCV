@@ -72,7 +72,7 @@ Trata-se do desenvolvimento de componentes de software utilizando metodologia á
 
 ## Sumário de resultados - Resultados obtidos e futuros
 
-1. [Site documentando o projeto](https://github.com/camilabezerril/ImageCV/tree/master)
+1. [Site documentando o projeto: https://github.com/camilabezerril/ImageCV](https://github.com/camilabezerril/ImageCV/tree/master)
 2. [Entrega do primeiro protótipo no fim de Janeiro](appcv.ImageCV.aix);
 4. [Entrega de relatório intermediário no fim de Março](DocumentacaoProjeto.pdf);
 5. [Entrega da última versão da extensão em Agosto](appcv.ImageCV.aix);
