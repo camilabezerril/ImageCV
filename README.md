@@ -164,14 +164,14 @@ Quando o app é aberto os controles deslizantes são posicionados no meio. A cor
 Por exemplo, deslizando R e G para o máximo e B para o mínimo, obtém-se um amarelo "puro" e intenso:
 
 <!--- ![Tela do app](amostras/Conversor/2.svg) --->
-<img src="amostras/Conversor/2.png" height="175" width="270"> 
+<img src="amostras/Conversor/2.svg" height="175" width="270"> 
 
 O amarelo tem H em torno de 1 e este, em particular, tem alta saturação (ou é intenso).
 
 A tela abaixo também apresenta um amarelo.
 
 <!--- ![Tela do app](amostras/Conversor/2a.svg) --->
-<img src="amostras/Conversor/2a.png" height="175" width="270"> 
+<img src="amostras/Conversor/2a.svg" height="175" width="270"> 
 
 #### Substituição de cor encadeada a detecção de elipses e retângulos.
 
