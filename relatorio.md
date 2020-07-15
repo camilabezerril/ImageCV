@@ -70,11 +70,10 @@ Trata-se do desenvolvimento de componentes de software utilizando metodologia á
 ### Uso da extensão - Construção de app para celular usando ImageCV e App Inventor.
 [Conteúdo detalhado](README.md)
 
-## Sumário de resultados - Indicadores de avaliação
+## Sumário de resultados - Resultados obtidos e futuros
 
 1. [Site documentando o projeto](https://github.com/camilabezerril/ImageCV/tree/master)
 2. [Entrega do primeiro protótipo no fim de Janeiro](appcv.ImageCV.aix);
-3. Submissão de resumo ao WICSI no fim de Fevereiro;
 4. [Entrega de relatório intermediário no fim de Março](DocumentacaoProjeto.pdf);
 5. [Entrega da última versão da extensão em Agosto](appcv.ImageCV.aix);
 6. [Entrega do relatório final em Agosto](relatorio.md);
@@ -108,6 +107,7 @@ A  disponibilização de um processo para criar extensões para App Inventor per
 BRADSKI, G. (2000) - The OpenCV Library. ​ Dr. Dobb’s Journal of Software Tools ​ .
 OpenCV (2019) - About OpenCV - <​ https://opencv.org/about/​ > Acessado em 26 de
 maio de 2019.
+
 POKRESS, Shaileen Crawford; VEIGA, José Juan Dominguez (2013) - MIT App
 Inventor: Enabling Personal Mobile Computing - PRoMoTo 2013 Proceedings
 (arXiv:1309.5509) October 2013.
