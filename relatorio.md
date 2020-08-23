@@ -1,4 +1,3 @@
-# Desenvolvimento de Componentes de Visão Computacional para Programação por Blocos
 # ImageCV - Componente de Visão Computacional para o App Inventor
 
 ## Introdução
@@ -45,6 +44,9 @@ no Android Studio, IDE oficial e profissional de aplicações Android, a bibliot
 projetos que tentaram implementar funcionalidades semelhantes, mas de forma
 limitada e desatualizada.
 
+Há alternativas para bibliotecas para visão computacional, como BoofCV (ABELES, 2016) que podem ter características como ambiente de desenvolvimento, formato e disponibilidade de biblioteca mais favoráveis ao desenvolvimento desta aplicação.
+
+Após o relatório, que contém os elementos textuais solicitados, seguem anexos documentos complementares, que também estão presentes no repositório <https://github.com/camilabezerril/ImageCV>.
 
 ## Objetivos
 
@@ -64,6 +66,7 @@ Trata-se do desenvolvimento de componentes de software utilizando metodologia á
 ## Resultados
 
 ### Substituição de OpenCV por BoofCV.
+
 ### Compilação de ImageCV.
 [Conteúdo detalhado](documentos/ExtensaoImageCV.md)
 
@@ -72,14 +75,16 @@ Trata-se do desenvolvimento de componentes de software utilizando metodologia á
 
 ## Sumário de resultados - Resultados obtidos e futuros
 
-1. [Site documentando o projeto: https://github.com/camilabezerril/ImageCV](https://github.com/camilabezerril/ImageCV/tree/master)
-2. [Entrega do primeiro protótipo no fim de Janeiro](appcv.ImageCV.aix);
-4. [Entrega de relatório intermediário no fim de Março](DocumentacaoProjeto.pdf);
-5. [Entrega da última versão da extensão em Agosto](appcv.ImageCV.aix);
-6. [Entrega do relatório final em Agosto](relatorio.md);
+1. Site com documentação, código-fonte e exemplos de uso: <https://github.com/camilabezerril/ImageCV>;
+2. Entrega do primeiro protótipo no fim de Janeiro;
+4. Entrega de relatório intermediário no fim de Março <https://github.com/camilabezerril/ImageCV/blob/master/DocumentacaoProjeto.pdf>;
+5. Entrega da última versão da extensão em Agosto: <https://github.com/camilabezerril/ImageCV/blob/master/appcv.ImageCV.aix>;
+6. Entrega do relatório final em Agosto: este documento;
 7. Submissão do resumo ao SIICUSP em Outubro.
 
 ## Discussão e conclusão
+
+Durante a instalação e teste do ambiente de desenvolvimento identificou-se a possibilidade de dificuldades para execução do OpenCV no ambiente de operação do app Inventor. O primeiro é uma biblioteca codificada em C e o segundo é um ambiente codificado em Java. Poderia ser necessário esforço significativo para portar e utilizar o OpenCV. A solução encontrada foi substituir OpenCV por BoofCV, uma biblioteca codificada em Java.
 
 A versão do BoofCV utilizada em ImageCV é 0.27, por questão de compatibilidade entre ambientes de desenvolvimento. A versão atual de BoofCV é 0.36. A documentação da versão 0.27 não foi encontrada, o que dificultou o uso das funções de reconhecimento de polígonos.
 
@@ -111,4 +116,6 @@ maio de 2019.
 POKRESS, Shaileen Crawford; VEIGA, José Juan Dominguez (2013) - MIT App
 Inventor: Enabling Personal Mobile Computing - PRoMoTo 2013 Proceedings
 (arXiv:1309.5509) October 2013.
+
+ABELES, P. (2016) - BoofCV v.0.25 - <http://boofcv.org/> Acessado em 23 de agosto de 2020.
 
