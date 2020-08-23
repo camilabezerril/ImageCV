@@ -46,7 +46,12 @@ limitada e desatualizada.
 
 Há alternativas para bibliotecas para visão computacional, como BoofCV (ABELES, 2016) que podem ter características como ambiente de desenvolvimento, formato e disponibilidade de biblioteca mais favoráveis ao desenvolvimento desta aplicação.
 
-Após o relatório, que contém os elementos textuais solicitados, seguem anexos documentos complementares, que também estão presentes no repositório <https://github.com/camilabezerril/ImageCV>.
+Após o relatório, que contém os elementos textuais solicitados, seguem anexos documentos complementares, que também estão presentes no repositório <https://github.com/camilabezerril/ImageCV>:
+
+- Anexo 1: README.md
+- Anexo 2: Como criar extensões para o App Inventor
+- Anexo 3: Como a extensão ImageCV foi codificada
+- Anexo 4: mapa do site
 
 ## Objetivos
 

@@ -3,7 +3,7 @@
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <meta name="Author" content="Made by 'tree'">
- <meta name="GENERATOR" content="$Version: $ tree v1.7.0 (c) 1996 - 2014 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <meta name="GENERATOR" content="$Version: $ tree v1.8.0 (c) 1996 - 2018 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
  <title>Directory Tree</title>
  <style type="text/css">
   <!-- 
@@ -44,6 +44,10 @@
 	│   │   ├── <a href="./amostras/Combinado/Screenshot_20200714-191821.png">Screenshot_20200714-191821.png</a><br>
 	│   │   ├── <a href="./amostras/Combinado/Screenshot_20200714-192558.png">Screenshot_20200714-192558.png</a><br>
 	│   │   └── <a href="./amostras/Combinado/Screenshot_20200714-192640.png">Screenshot_20200714-192640.png</a><br>
+	│   ├── <a href="./amostras/Conversor/">Conversor</a><br>
+	│   │   ├── <a href="./amostras/Conversor/1.svg">1.svg</a><br>
+	│   │   ├── <a href="./amostras/Conversor/2a.svg">2a.svg</a><br>
+	│   │   └── <a href="./amostras/Conversor/2.svg">2.svg</a><br>
 	│   ├── <a href="./amostras/Elipses/">Elipses</a><br>
 	│   │   ├── <a href="./amostras/Elipses/AltImage_8610.jpg">AltImage_8610.jpg</a><br>
 	│   │   ├── <a href="./amostras/Elipses/IMG_20200615_165551868.jpg">IMG_20200615_165551868.jpg</a><br>
@@ -120,6 +124,7 @@
 	│   &nbsp;&nbsp;&nbsp; │   └── <a href="./Documentos/sobreGit/screenshots/novoramo.png">novoramo.png</a><br>
 	│   &nbsp;&nbsp;&nbsp; └── <a href="./Documentos/sobreGit/versionamento.md">versionamento.md</a><br>
 	├── <a href="./EDITAL-PUB-2019-2020-1.pdf">EDITAL-PUB-2019-2020-1.pdf</a><br>
+	├── <a href="./Folha_de_Rosto_Relatorio.pdf">Folha_de_Rosto_Relatorio.pdf</a><br>
 	├── <a href="./IC%20-%20Imagem.pdf">IC - Imagem.pdf</a><br>
 	├── <a href="./ImageCV.java">ImageCV.java</a><br>
 	├── <a href="./README.md">README.md</a><br>
@@ -159,12 +164,12 @@
 	</p>
 	<p>
 
-12 directories, 114 files
+13 directories, 118 files
 	<br><br>
 	</p>
 	<hr>
 	<p class="VERSION">
-		 tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
+		 tree v1.8.0 © 1996 - 2018 by Steve Baker and Thomas Moore <br>
 		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
 		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
 		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
