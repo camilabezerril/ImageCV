@@ -412,6 +412,7 @@ Permite zerar a quantidade de elipses.
 
 Permite zerar a quantidade de polígonos.
 
+<!---
 ## Bibliografia
 
 Pokress, S.C., Veiga, J. MIT App Inventor: Enabling Personal Mobile Computing. In Proceedings of the PRoMoTo Workshop at the ACM SIGPLAN conference on Systems, Programming, Languages and Applications (SPLASH ’13). ACM, New York, NY, USA. (http://arxiv.org/abs/1310.2830). 
@@ -464,4 +465,4 @@ fabio@fabio-13Z940-G-BK71P1:~/Documentos/Camila/screenshots-primeiroApp$ convert
 ```
 
 )
-
+--->
